@@ -21,9 +21,6 @@ public class Materia {
         this.codigo = codigoMateria;
     }
 
-    public String getNombre(){
-        return this.nombre;
-    }
     public void setNombre(String nombreMateria){
         this.nombre = nombreMateria;
     }
