@@ -9,7 +9,6 @@ import java.util.ArrayList;
  * @author juan manuel
  */
 public class Nota {
-    
     private int valor;
     private ArrayList<Estudiante> asignar;
 

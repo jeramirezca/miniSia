@@ -17,7 +17,7 @@ public class Estudiante{
     private ArrayList<Grupo> atiende;
     private ArrayList<Materia> materiasInscritas;
     private ArrayList<Subsidio> subsidios;
-    private ArrayList<Nota> notas;
+    private String clave;
 
     public String getNombre(){
         return this.nombre;
@@ -75,11 +75,11 @@ public class Estudiante{
         this.subsidios.add(subsidioEstudiante);
     }
 
-    public Nota getNotas(int indice){
-        return this.notas.get(indice);
+    public String getClave(){
+        return clave;
     }
-    public void setNotas(Nota notaestudiante){
-        this.notas.add(notaestudiante);
+    public void setClave(String a){
+        clave=a;
     }
     
 }
