@@ -15,7 +15,7 @@ public class Profesor{
     private String ID;
     private String email;
     private ArrayList<Grupo> cursos;
-    private ArrayList<Nota> califica;
+    private String clave;
     //METODOS GET Y SET
     
     public void setNombre (String a){
@@ -61,12 +61,12 @@ public class Profesor{
         return cursos;
     }
     
-       public void setNotas (Nota e){
-              this.califica.add(e);
+       public void setClave (String e){
+              clave=e;
     }
     
-    public Nota getNotas (int a){
-        return califica.get(a);
+    public String getClave (){
+        return clave;
     }
 
 
