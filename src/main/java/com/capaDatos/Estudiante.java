@@ -54,22 +54,22 @@ public class Estudiante{
         this.ID = idEstudiante;
     }
 
-    public Grupo getAtiende(int indice){
-        return this.atiende.get(indice);
+    public ArrayList<Grupo> getAtiende(){
+        return this.atiende;
     }
     public void setAtiende(Grupo grupoAtendido){
         this.atiende.add(grupoAtendido);
     }
 
-    public Materia getMateriasInscritas(int indice){
-        return this.materiasInscritas.get(indice);
+    public ArrayList<Materia> getMateriasInscritas(){
+        return this.materiasInscritas;
     }
     public void setMateriasInscritas(Materia materiaEstudiante){
         this.materiasInscritas.add(materiaEstudiante);
     }
 
-    public Subsidio getSubsidios(int indice){
-        return this.subsidios.get(indice);
+    public ArrayList<Subsidio> getSubsidios(){
+        return this.subsidios;
     }
     public void setSubsidios(Subsidio subsidioEstudiante){
         this.subsidios.add(subsidioEstudiante);
@@ -81,5 +81,7 @@ public class Estudiante{
     public void setClave(String a){
         clave=a;
     }
-    
+    public void prueba(){
+        System.out.print("prueba");
+    }
 }
