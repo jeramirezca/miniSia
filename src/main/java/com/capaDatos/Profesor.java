@@ -14,7 +14,7 @@ public class Profesor{
     private int edad;
     private String ID;
     private String email;
-    private ArrayList<Grupo> dictados;
+    private ArrayList<Grupo> cursos;
     private ArrayList<Nota> califica;
     //METODOS GET Y SET
     
@@ -54,11 +54,11 @@ public class Profesor{
     //PARA LOS get ES indispensable tener el indice de cada elemento
     //recuerda que a los set se les da de argumento un objeto.
         public void setGrupo (Grupo e){
-              this.dictados.add(e);
+              this.cursos.add(e);
     }
     
     public ArrayList<Grupo> getGrupo ( ){
-        return dictados;
+        return cursos;
     }
     
        public void setNotas (Nota e){
