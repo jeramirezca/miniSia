@@ -4,12 +4,9 @@
  */
 package com.capaDatos;
 import java.util.ArrayList;
-/**
- *
- * @author juan manuel
- */
+
 public class Grupo {
-    private int codigo;
+    private int numero;
     private int cupos;
     private Profesor profesor;
     private ArrayList<Estudiante> estudiantes;
@@ -17,16 +14,16 @@ public class Grupo {
     private Materia asignatura;
     private ArrayList<Nota> notasGrupo;
 
-    public int getCodigo() {
-        return codigo;
+    public int getNumero() {
+        return this.numero;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCodigo(int numeroGrupo) {
+        this.numero = numeroGrupo;
     }
 
     public int getCupos() {
-        return cupos;
+        return this.cupos;
     }
 
     public void setCupos(int cupos) {
@@ -34,7 +31,7 @@ public class Grupo {
     }
 
     public Profesor getProfesor() {
-        return profesor;
+        return this.profesor;
     }
 
     public void setProfesor(Profesor profesor) {
@@ -42,7 +39,7 @@ public class Grupo {
     }
 
     public ArrayList<Estudiante> getEstudiantes() {
-        return estudiantes;
+        return this.estudiantes;
     }
 
     public void setEstudiantes(ArrayList<Estudiante> estudiantes) {
@@ -50,7 +47,7 @@ public class Grupo {
     }
 
     public String[] getHorario() {
-        return horario;
+        return this.horario;
     }
 
     public void setHorario(String[] horario) {
@@ -58,7 +55,7 @@ public class Grupo {
     }
 
     public Materia getAsignatura() {
-        return asignatura;
+        return this.asignatura;
     }
 
     public void setAsignatura(Materia asignatura) {
@@ -66,7 +63,7 @@ public class Grupo {
     }
 
     public ArrayList<Nota> getNotasGrupo() {
-        return notasGrupo;
+        return this.notasGrupo;
     }
 
     public void setNotasGrupo(ArrayList<Nota> notasGrupo) {

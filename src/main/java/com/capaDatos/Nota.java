@@ -4,28 +4,25 @@
  */
 package com.capaDatos;
 import java.util.ArrayList;
-/**
- *
- * @author juan manuel
- */
+
 public class Nota {
     private int valor;
-    private ArrayList<Estudiante> asignar;
+    private Estudiante estudiante;
 
     public int getValor() {
-        return valor;
+        return this.valor;
     }
 
     public void setValor(int valor) {
         this.valor = valor;
     }
 
-    public ArrayList<Estudiante> getAsignar() {
-        return asignar;
+    public Estudiante getEstudiante() {
+        return this.estudiante;
     }
 
-    public void setAsignar(ArrayList<Estudiante> asignar) {
-        this.asignar = asignar;
+    public void setEstudiante(Estudiante estudianteCalificado) {
+        this.estudiante = estudianteCalificado;
     }
   
 }

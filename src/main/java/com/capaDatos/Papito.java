@@ -4,37 +4,34 @@
  */
 package com.capaDatos;
 import java.util.ArrayList;
-/**
- *
- * @author juan manuel
- */
+
 public class Papito{
     private String nombre;
-    private String ID;
-    private ArrayList<Estudiante> acudiente;
+    private int ID;
+    private ArrayList<Estudiante> acudeA;
     
-    public void setNombre( String a){
-        this.nombre = a;
+    public void setNombre( String nombre){
+        this.nombre = nombre;
     }
     
-    public String getNombre( String a){
+    public String getNombre(){
         return this.nombre;
     }
     
-       public void setID( String a){
-        this.ID = a;
+    public void setID( int id){
+        this.ID = id;
     }
     
-    public String getID( String a){
+    public int getID(){
         return this.ID;
     }
     
-    public void setAcudiente(Estudiante a){
-        acudiente.add(a);
+    public void setAcudeA (ArrayList<Estudiante> acudeA){
+        this.acudeA = acudeA;
     }
     
-    public Estudiante getAcudiente(int a){
-        return acudiente.get(a);
+    public ArrayList<Estudiante> getAcudeA(){
+        return this.acudeA;
     }
     
     

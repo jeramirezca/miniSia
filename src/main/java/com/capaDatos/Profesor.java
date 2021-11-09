@@ -5,71 +5,62 @@
 package com.capaDatos;
 import java.util.ArrayList;
 
-/**
- *
- *en las listas toca devolver todos los elementos
- */
 public class Profesor{
     private String nombre;
     private int edad;
-    private String ID;
+    private int ID;
     private String email;
     private ArrayList<Grupo> cursos;
     private String clave;
     //METODOS GET Y SET
     
-    public void setNombre (String a){
-        this.nombre = a;
+    public void setNombre (String nombre){
+        this.nombre = nombre;
     }
     
-    public String getNombre ( ){
+    public String getNombre( ){
         return this.nombre;
     }
     
-        public void setEdad (int i){
-            this.edad = i;
+    public void setEdad (int edad){
+            this.edad = edad;
     }
     
-    public int getEdad ( ){
+    public int getEdad( ){
         return this.edad;
     }
     
-        public void setID (String ID ){
+    public void setID (int ID ){
              this.ID = ID;
     }
     
-    public String getID ( ){
+    public int getID ( ){
         return this.ID;
     }
     
-        public void setEmail (String a ){
-           this.email=a;
+    public void setEmail (String email ){
+           this.email= email;
     }
     
-    public String getEmail ( ){
+    public String getEmail( ){
         return this.email;
     }
     
-    //GET Y SET PARA LOS ARRAYLIST
-    //PARA LOS get ES indispensable tener el indice de cada elemento
-    //recuerda que a los set se les da de argumento un objeto.
-        public void setGrupo (Grupo e){
-              this.cursos.add(e);
+    public void setCursos (ArrayList<Grupo> cursosDictados){
+        this.cursos = cursosDictados;
     }
     
-    public ArrayList<Grupo> getGrupo ( ){
-        return cursos;
+    public ArrayList<Grupo> getGrupo( ){
+        return this.cursos;
     }
     
-       public void setClave (String e){
-              clave=e;
+    public void setClave (String clave){
+        this.clave = clave;
     }
     
     public String getClave (){
-        return clave;
+        return this.clave;
     }
 
-
-    
     
 }

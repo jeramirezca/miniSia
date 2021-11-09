@@ -4,12 +4,9 @@
  */
 package com.capaDatos;
 import java.util.ArrayList;
-/**
- *
- * @author juan manuel
- */
+
 public class Materia {
-       private int codigo;
+    private int codigo;
     private String nombre;
     private int creditos;
     private ArrayList<Grupo> grupos;
@@ -35,10 +32,10 @@ public class Materia {
         this.creditos = creditosMateria;
     }
 
-    public Grupo getGrupos(int indice){
-        return this.grupos.get(indice);
+    public ArrayList<Grupo> getGrupos(){
+        return this.grupos;
     }
-    public void setGrupos(Grupo grupoMateria){
-        this.grupos.add(grupoMateria);
+    public void setGrupos(ArrayList<Grupo> gruposMateria){
+        this.grupos = gruposMateria;
     }
 }

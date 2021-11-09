@@ -4,12 +4,9 @@
  */
 package com.capaDatos;
 import java.util.ArrayList;
-/**
- *
- * @author juan manuel
- */
+
 public class Estudiante{
-   private String nombre;
+    private String nombre;
     private int edad;
     private String usuario;
     private Papito acudiente;
@@ -57,31 +54,29 @@ public class Estudiante{
     public ArrayList<Grupo> getAtiende(){
         return this.atiende;
     }
-    public void setAtiende(Grupo grupoAtendido){
-        this.atiende.add(grupoAtendido);
+    public void setAtiende(ArrayList<Grupo> gruposAtendidos){
+        this.atiende = gruposAtendidos;
     }
 
     public ArrayList<Materia> getMateriasInscritas(){
         return this.materiasInscritas;
     }
-    public void setMateriasInscritas(Materia materiaEstudiante){
-        this.materiasInscritas.add(materiaEstudiante);
+    public void setMateriasInscritas(ArrayList<Materia> materiasEstudiante){
+        this.materiasInscritas = materiasEstudiante;
     }
 
     public ArrayList<Subsidio> getSubsidios(){
         return this.subsidios;
     }
-    public void setSubsidios(Subsidio subsidioEstudiante){
-        this.subsidios.add(subsidioEstudiante);
+    public void setSubsidios(ArrayList<Subsidio> subsidiosEstudiante){
+        this.subsidios = subsidiosEstudiante;
     }
 
     public String getClave(){
-        return clave;
+        return this.clave;
     }
-    public void setClave(String a){
-        clave=a;
+    public void setClave(String clave){
+        this.clave = clave;
     }
-    public void prueba(){
-        System.out.print("prueba");
-    }
+  
 }
