@@ -4,7 +4,7 @@
  */
 package com.capaDatos;
 import java.util.ArrayList;
-// xddddddddddddddddddddddddddd
+
 public class Grupo {
     private int numero;
     private int cupos;
