@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
-package com.capaDatos;
+package data;
 import java.util.ArrayList;
 
 public class Estudiante{
+    
     private String nombre;
     private int edad;
     private String usuario;
@@ -19,6 +20,7 @@ public class Estudiante{
     public String getNombre(){
         return this.nombre;
     }
+    
     public void setNombre(String nombreEstudiante){
         this.nombre = nombreEstudiante;
     }
