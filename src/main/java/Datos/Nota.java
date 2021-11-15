@@ -29,10 +29,10 @@ public class Nota {
         this.setEstudiante(estudiante);
     }
     public Nota(int valor){
-        this(valor,null);
+        this(valor,new Estudiante());
     }
     public Nota(){
-        this(0,null);
+        this(0,new Estudiante());
     }
     
     @Override

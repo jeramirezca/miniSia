@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class impresiones {
-    public void mostrarNotas(ArrayList<String> notas){
-    for(String nota : notas){
-        System.out.print(nota + " ");
+    public void mostrarListas(ArrayList<String> consultas){
+    for(String consulta : consultas){
+        System.out.print(consulta + " ");
     }
     
     }

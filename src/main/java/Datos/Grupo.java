@@ -119,7 +119,7 @@ public class Grupo {
     public String toString(){
         String cadena = "Materia: " + asignatura.getNombre() + 
                 " Profesor a cargo: " + profesor.getNombre() 
-                + " Grupo numero: " + String.valueOf(numero) + "Horario: " 
+                + " Grupo numero: " + String.valueOf(numero) + " Horario: " 
                 + horario + " Cupos: " + String.valueOf(cupos);
         return cadena;
     }

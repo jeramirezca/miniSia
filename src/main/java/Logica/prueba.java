@@ -4,9 +4,8 @@
  */
 package Logica;
 
-import Datos.Grupo;
-import Datos.Estudiante;
-import Datos.Materia;
+import Datos.*;
+import UI.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
@@ -14,18 +13,9 @@ import java.util.Arrays;
 
 public class prueba {
     public static void main(String[] args){
-    // CREACION DE LOS GRUPOS EN LOS QUE ESTA EL ESTUDIANTE
-    Grupo primero = new Grupo();
-    Grupo segundo = new Grupo();
-    Grupo tercero = new Grupo();
-    ArrayList al = new ArrayList<Grupo>();
-    al.add(primero);
-    al.add(segundo);
-    al.add(tercero);    
-    /*for(Object grupo : al){
-            Grupo xd = (Grupo) grupo;
-            
-        }*/
+   
+    
+    
     //CREACION MATERIAS DEL ESTUDIANTE
      Materia materiauno = new Materia();
      Materia materiados = new Materia();
@@ -34,19 +24,63 @@ public class prueba {
     
     //CREACION ESTUDIAMTE
      Estudiante pruebasxd = new Estudiante();
-     //pruebasxd.setMateriasInscritas(x);
+     pruebasxd.setMateriasInscritas(x);
+     
+     consultas consultor = new consultas();
+     impresiones impresor = new impresiones();
+     
+     int idEstEjemplo = pruebasxd.getID();
+     //System.out.print(idEstEjemplo);
+     
+     // CREACION DE UN DICCIONARIO DE NOTAS
+     Nota notaEjemplo = new Nota();
+     System.out.println(notaEjemplo.getValor());
+     HashMap <String, Nota> notasEjemplo = new HashMap();
+     notasEjemplo.put(String.valueOf(idEstEjemplo), notaEjemplo);
      //System.out.print(x.get(0).getClass());
      //ArrayList<Materia> xd = pruebasxd.getMateriasInscritas();
      //System.out.print(pruebasxd.toString());
-     //pruebasxd.setAtiende(al);
-     //ArrayList<String> salida = consultarNotas(pruebasxd);
+     
+    // CREACION DE LOS GRUPOS EN LOS QUE ESTA EL ESTUDIANTE
+    Grupo primero = new Grupo();
+    Grupo segundo = new Grupo();
+    Grupo tercero = new Grupo();
     
-     //PRUEBAS CON ARRAYLIST
+    primero.setNotasGrupo(notasEjemplo);
+    segundo.setNotasGrupo(notasEjemplo);
+    tercero.setNotasGrupo(notasEjemplo);
+    ArrayList al = new ArrayList<Grupo>();
+    al.add(primero);
+    al.add(segundo);
+    al.add(tercero);    
+    /*for(Object grupo : al){
+            Grupo xd = (Grupo) grupo;
+            
+        }*/
+     pruebasxd.setAtiende(al);
+    // CREACION DE UN PAPITO
+    Papito papitoEjemplo = new Papito();
+    ArrayList acudea = new ArrayList();
+    acudea.add(pruebasxd);
+    papitoEjemplo.setAcudeA(acudea);
+     //System.out.print(primero.getNotasGrupo());
+     //System.out.print(segundo.getNotasGrupo().get(String.valueOf(idEstEjemplo)));
+     //System.out.print(tercero.getNotasGrupo());
+     //System.out.println("xd");
+     //System.out.print(al);
+     
+    //CREACION DE UN PROFE
+    Profesor profePrueba = new Profesor();
+    profePrueba.setCursos(al);
+    ArrayList<String> salida = consultor.consultarProfes(papitoEjemplo);
+     
+    impresor.mostrarListas(salida);
+     /*PRUEBAS CON ARRAYLIST
     ArrayList xd = new ArrayList();
     xd.add("hola");
     xd.add(1);
     int n = xd.size();
-    System.out.println(xd);
+    System.out.println(xd);*/
     }
     
     
