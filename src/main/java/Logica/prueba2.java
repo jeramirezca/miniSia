@@ -42,7 +42,7 @@ public class prueba2 {
    System.out.println(prueba_consultas.consultarSubsidio(estudianto_prueba));
    System.out.println(prueba_consultas.consultarSubsidio(e));
   
-
+  //Resultado de la prueba, sirve a la perfección asignar y consultar subsidio.
     }
     
    

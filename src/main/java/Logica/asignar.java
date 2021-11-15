@@ -39,4 +39,10 @@ public class asignar {
         return true;
 
     }
+    
+    public asignarNota(Grupo grupo_asignar){
+        
+    }
+    
+    
 }
