@@ -17,11 +17,15 @@ public class prueba2 {
      */
     public static void main(String args[]) {
         
-          ArrayList lista_mat = new ArrayList<Materia>();
+   ArrayList lista_mat = new ArrayList<Materia>();
    ArrayList lista_est = new ArrayList<Estudiante>();
-        //Pruebas para subsidio:
    consultas prueba_consultas = new consultas();
    asignar prueba_asignar = new asignar();
+  
+   
+   /*
+        //Pruebas para subsidio:
+  
    
     Subsidio tipoA = new Subsidio("A", 450.340, 2);
     Subsidio tipoB = new Subsidio("B", 100.340, 1);
@@ -43,6 +47,39 @@ public class prueba2 {
    System.out.println(prueba_consultas.consultarSubsidio(e));
   
   //Resultado de la prueba, sirve a la perfección asignar y consultar subsidio.
+*/
+   
+   //Pruebas para notas:
+   
+   Estudiante estud1 = new Estudiante("pepito casas" );
+   Estudiante estud2 = new Estudiante("pedro casas" );
+   Estudiante estud3 = new Estudiante("pelo casas" );
+   Estudiante estud4 = new Estudiante("pepitolia casas" );
+   Profesor profe = new Profesor();
+   Materia asignatura = new Materia();
+   
+   lista_est.add(estud1);
+   lista_est.add(estud2);
+   lista_est.add(estud3);
+   lista_est.add(estud4);
+   
+   Grupo grupo1 = new Grupo(profe, 0, lista_est, 0, asignatura, lista_est);
+   
+        System.out.println("------------------");  
+   System.out.println(prueba_asignar.asignarNota(grupo1));
+     System.out.println("------------------");
+        System.out.println(grupo1.getNotasGrupo());
+       System.out.println("------------------");
+   System.out.println("LA ID es: "+String.valueOf(estud1.getID()));
+     System.out.println("------------------");
+   System.out.println(prueba_asignar.cambiarNota(grupo1, estud1.getID()));
+     System.out.println("------------------");
+      System.out.println(grupo1.getNotasGrupo());
+       System.out.println("------------------");
+   
+           
+   //Resultado de pruebas, los metodos cambiar y asignar nota sirven xd
+   
     }
     
    
