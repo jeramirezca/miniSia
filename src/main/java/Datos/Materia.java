@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package data;
+package Datos;
 import java.util.ArrayList;
 
 public class Materia {
@@ -37,5 +37,34 @@ public class Materia {
     }
     public void setGrupos(ArrayList<Grupo> gruposMateria){
         this.grupos = gruposMateria;
+    }
+    
+    public Materia(int codigo, String nombre, int creditos, ArrayList<Grupo> grupos){
+        this.setCodigo(codigo);
+        this.setNombre(nombre);
+        this.setCreditos(creditos);
+        this.setGrupos(grupos);
+    }
+    public Materia(int codigo, String nombre, int creditos){
+        this(codigo,nombre,creditos,new ArrayList<Grupo>());
+    }
+    public Materia(int codigo, String nombre){
+        this(codigo,nombre,0,new ArrayList<Grupo>());
+    }
+    public Materia(int codigo){
+        this(codigo,"desconocido",0,new ArrayList<Grupo>());
+    }
+    public Materia(){
+        this(00000,"desconocido",0,new ArrayList<Grupo>());
+    }
+    
+    
+    @Override
+    
+    public String toString(){
+        String cadena = "Materia: " + nombre + " Codigo: " + String.valueOf(codigo)
+                + " Numero de creditos: " + String.valueOf(creditos) + 
+                " Grupos: Hay " + String.valueOf(grupos.size());
+        return cadena;
     }
 }

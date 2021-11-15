@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package data;
-import java.util.ArrayList;
+package Datos;
 
 public class Nota {
     private int valor;
@@ -23,6 +22,24 @@ public class Nota {
 
     public void setEstudiante(Estudiante estudianteCalificado) {
         this.estudiante = estudianteCalificado;
+    }
+    
+    public Nota(int valor, Estudiante estudiante){
+        this.setValor(valor);
+        this.setEstudiante(estudiante);
+    }
+    public Nota(int valor){
+        this(valor,null);
+    }
+    public Nota(){
+        this(0,null);
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = " La nota es: " +
+                String.valueOf(valor);
+        return cadena;
     }
   
 }
