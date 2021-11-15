@@ -4,9 +4,7 @@
  */
 package Logica;
 
-import Datos.Grupo;
-import Datos.Estudiante;
-import Datos.Materia;
+import Datos.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
@@ -15,7 +13,7 @@ import java.util.Arrays;
 public class prueba {
     public static void main(String[] args){
     // CREACION DE LOS GRUPOS EN LOS QUE ESTA EL ESTUDIANTE
-    Grupo primero = new Grupo();
+    Grupo primero = new Grupo(new Profesor(),2);
     Grupo segundo = new Grupo();
     Grupo tercero = new Grupo();
     ArrayList al = new ArrayList<Grupo>();
@@ -49,6 +47,8 @@ public class prueba {
     System.out.println(xd);
     }
     
+    
+
     
     /*public ArrayList<Nota> consultarNotas(Estudiante estudiante){
         int id = estudiante.getID();

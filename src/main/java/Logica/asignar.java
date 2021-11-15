@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
 package Logica;
+import Datos.*;
 
 /**
  *
@@ -14,6 +15,6 @@ public class asignar {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        // TODO code application logic here
+        
     }
 }

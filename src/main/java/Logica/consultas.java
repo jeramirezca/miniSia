@@ -3,17 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Logica;
-import Datos.Materia;
-import Datos.Estudiante;
-import Datos.Grupo;
-import Datos.Papito;
-import Datos.Nota;
+import Datos.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class consultas {
     
-    public ArrayList<String> consultarNotas(Estudiante estudiante, Materia asignatura){
+    public  ArrayList<String> consultarNotas(Estudiante estudiante, Materia asignatura){
         int id = estudiante.getID();
         ArrayList notaEstudiante = new ArrayList();
         ArrayList<Grupo> grupos = estudiante.getAtiende();
@@ -63,6 +59,33 @@ public class consultas {
         
         return notasEstudiantes;
     }
+    
+    public  String consultarSubsidio(Estudiante consultor){
+     String respuesta = " ";
+    
+    if(consultor.getSubsidios().isEmpty()) respuesta ="Usted no tiene subsidios asignados";
+    else{
+        ArrayList<Subsidio> Lista_subsidios = consultor.getSubsidios();
+        
+        for (Subsidio i : Lista_subsidios) {
+            //String elemento = " ";
+            String valor_monetario = String.valueOf(i.getValor());
+            String duracion = String.valueOf(i.getDuracionSemestres());
+            String personas_usando = String.valueOf(i.getBeneficiarios().size());
+            
+            respuesta += "\n"
+                    +"Tipo: "+ i.getTipo()
+                    + " \n Valor asignado: " + valor_monetario
+                    + " \n Duracion semestral: " + duracion
+                    + "\n Personas usando este subsidio: " + personas_usando
+                    +"\n";
+            
+            //respuesta.add(elemento);
+          
+        }
+    }
+    return respuesta;
+}
   
     
 }

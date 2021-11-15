@@ -17,6 +17,7 @@ public class Estudiante{
     private ArrayList<Subsidio> subsidios;
     private String clave;
 
+    //getters y setters
     public String getNombre(){
         return this.nombre;
     }
@@ -91,6 +92,8 @@ public class Estudiante{
         String usuario = nombre.concat(String.valueOf(finalPart));
         return usuario;
     }
+    //*********************
+    //Metódos constructores
     
     public Estudiante(){
         this("Desconocido",-1,new Papito(),"1234",new ArrayList<Materia>(),
