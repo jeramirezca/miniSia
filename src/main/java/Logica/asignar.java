@@ -9,7 +9,7 @@ package Logica;
  * @author juan manuel
  */
 public class asignar {
-
+//esto no es relevante
     /**
      * @param args the command line arguments
      */
