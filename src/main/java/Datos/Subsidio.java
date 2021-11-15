@@ -11,6 +11,10 @@ public class Subsidio {
     private int duracionSemestres;
     private ArrayList<Estudiante> beneficiarios;
 
+    
+    //metodos get y set:
+    
+    
     public String getTipo() {
         return this.tipo;
     }
@@ -50,6 +54,7 @@ public class Subsidio {
         this.setDuraciónSemestres(duracion);
         this.setBeneficiarios(beneficiarios);    
     }
+    //Metodos constructores
     public Subsidio(String tipo, double valor, int duracion){
         this(tipo, valor, duracion, new ArrayList<Estudiante>());
     }
@@ -66,8 +71,9 @@ public class Subsidio {
     @Override
     
     public String toString(){
-     String cadena = "Subsidio tipo: " + tipo + " valor: " + valor + 
-             " tiempo del beneficio: " + String.valueOf(duracionSemestres); 
+     String cadena = "Subsidio tipo: " + tipo + "\n valor: " + valor + 
+             "\n tiempo del beneficio: " + String.valueOf(duracionSemestres)
+             + "\n numero de beneficiados: " + String.valueOf(beneficiarios.size()); 
      
      return cadena;
     }
