@@ -72,9 +72,12 @@ public class prueba {
     //CREACION DE UN PROFE
     Profesor profePrueba = new Profesor();
     profePrueba.setCursos(al);
-    ArrayList<String> salida = consultor.consultarProfes(papitoEjemplo);
-     
-    impresor.mostrarListas(salida);
+    ArrayList<ArrayList> salida = consultor.consultarProfes(papitoEjemplo);
+     //ArrayList<Profesor> salida = consultor.consultarProfes(pruebasxd);
+    //impresor.mostrarNotas(salida);
+    impresor.mostrarProfesPapitos(salida);
+    //System.out.println(salida.size());
+   // impresor.mostrarProfes(salida);
      /*PRUEBAS CON ARRAYLIST
     ArrayList xd = new ArrayList();
     xd.add("hola");

@@ -101,28 +101,30 @@ public class consultas {
         return horarioEstudiantes;
     }
     
-    public ArrayList<String> consultarProfes(Estudiante estudiante){
-        ArrayList<String> profesores = new ArrayList();
+    public ArrayList<Profesor> consultarProfes(Estudiante estudiante){
+        ArrayList<Profesor> profesores = new ArrayList();
         ArrayList<Grupo> grupos = estudiante.getAtiende();
         for(Object grupo : grupos){
             Grupo grupoEstudiante = (Grupo) grupo;
-            String cadena = grupoEstudiante.getAsignatura().getNombre();
-            cadena += ": profesor a cargo " + grupoEstudiante.getProfesor().getNombre();
-            profesores.add(cadena);
+            Profesor profe = grupoEstudiante.getProfesor();
+            profesores.add(profe);
         }    
         return profesores;
     }
     
-    public ArrayList<String> consultarProfes(Papito acudiente){
+    public ArrayList<ArrayList> consultarProfes(Papito acudiente){
         ArrayList<Estudiante> acudidos = acudiente.getAcudeA();
-        ArrayList<String> profes = new ArrayList();
-        for(Object objeto:acudidos){
+        ArrayList<ArrayList> profesYestudiantes = new ArrayList();
+        for(Object objeto:acudidos){            
             Estudiante estudiante = (Estudiante) objeto;
-            String cadena = estudiante.getNombre() + ": ";
-            cadena += String.join(" ", consultarProfes(estudiante)); 
-            profes.add(cadena);          
+            ArrayList lista = new ArrayList();
+            String nombreEstudiante = estudiante.getNombre() + ": ";
+            lista.add(nombreEstudiante);
+            ArrayList<Profesor> profesores = consultarProfes(estudiante); 
+            lista.add(profesores);
+            profesYestudiantes.add(lista);
         }    
-        return profes;
+        return profesYestudiantes;
     }
     
   
