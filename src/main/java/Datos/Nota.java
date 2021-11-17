@@ -37,7 +37,7 @@ public class Nota {
     
     @Override
     public String toString(){
-        String cadena = " La nota es: " +
+        String cadena = "El estudiante: "+estudiante.getNombre()+" \n La nota es: " +
                 String.valueOf(valor);
         return cadena;
     }
