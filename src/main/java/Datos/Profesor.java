@@ -67,6 +67,9 @@ public class Profesor{
         int id = randomGenerator.nextInt(1000);
         return id;
     }
+    
+    //METODOS CONSTRUCTORES
+    
     public Profesor(String nombre, int edad, String gmail,
             ArrayList<Grupo> cursos, String clave){
         

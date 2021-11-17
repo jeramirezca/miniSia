@@ -165,4 +165,43 @@ public class consultas {
         return respuesta;
     }
     
+/*
+    //MEtodo 1: con estudiante y documento del profesor
+    public String consultarProfesor(int documento_profe,Estudiante consultor){
+        String respuesta = " ";
+        Profesor consultado = new Profesor();
+  
+        //Si solo tenemos el documento, buscaremos en los grupos del estudiante el profesor que le coincida el documento
+        for( Grupo grupo_estudiante : consultor.getAtiende()){
+            Profesor buscando = grupo_estudiante.getProfesor();
+            if(buscando.getID() == documento_profe) {
+                consultado = buscando;
+                
+            }
+        }
+        
+        respuesta += "Nombre: " + consultado.getNombre()+
+                "\n Edad: "+ consultado.getEdad()+
+                "\n Email: "+ consultado.getEmail()
+                +"\n Grupos dictados: " + consultado.getCursos() ; 
+         
+        return respuesta;
+    }
+    
+    //Metodo 2: con grupo
+        public String consultarProfesor(Grupo grupo_consultor){
+        String respuesta = " ";
+        Profesor consultado = grupo_consultor.getProfesor();
+  
+     
+        
+        respuesta += "Nombre: " + consultado.getNombre()+
+                "\n Edad: "+ consultado.getEdad()+
+                "\n Email: "+ consultado.getEmail()
+                +"\n Grupos dictados: " + consultado.getCursos() ; 
+         
+        return respuesta;
+    }
+*/
+
 }
