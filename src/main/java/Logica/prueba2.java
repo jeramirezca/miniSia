@@ -49,6 +49,7 @@ public class prueba2 {
   //Resultado de la prueba, sirve a la perfección asignar y consultar subsidio.
 */
    
+   /*
    //Pruebas para notas:
    
    Estudiante estud1 = new Estudiante("pepito casas" );
@@ -80,7 +81,10 @@ public class prueba2 {
            
    //Resultado de pruebas, los metodos cambiar y asignar nota sirven xd
    
+*/
+
     }
     
+
    
 }
