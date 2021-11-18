@@ -8,6 +8,8 @@ import java.util.Random;
 
 public class Papito{
     private String nombre;
+    private String usuario;
+    private String clave;
     private int ID;
     private ArrayList<Estudiante> acudeA;
     
@@ -17,6 +19,22 @@ public class Papito{
     
     public String getNombre(){
         return this.nombre;
+    }
+    
+    public void setUsuario(String usuario){
+        this.usuario = usuario;
+    }
+    
+    public String getUsuario(){
+        return this.usuario;
+    }
+    
+    public void setClave(String clave){
+        this.clave = clave;
+    }
+    
+    public String getClave(){
+        return this.clave;
     }
     
     public void setID( int id){
@@ -35,23 +53,33 @@ public class Papito{
         return this.acudeA;
     }
     
+    public String randomUsuario(String nombre){
+        Random randomGenerator = new Random();
+        int finalPart = randomGenerator.nextInt(100);
+        String usuario = nombre.concat(String.valueOf(finalPart));
+        return usuario;
+    }
+    
     public int randomID(){
         Random randomGenerator = new Random();
         int id = randomGenerator.nextInt(1000);
         return id;
     }
     
-    public Papito(String nombre, ArrayList<Estudiante> acudientede){
+    public Papito(String nombre, ArrayList<Estudiante> acudientede, String clave){
         int id = randomID();
+        String randomUser = randomUsuario(nombre);
         this.setID(id);
         this.setAcudeA(acudientede);
         this.setNombre(nombre);
+        this.setClave(clave);
+        this.setUsuario(randomUser);
     }
     public Papito(String nombre){
-        this(nombre,new ArrayList<Estudiante>());
+        this(nombre,new ArrayList<Estudiante>(), "1234");
     }
     public Papito(){
-        this("desconocido",new ArrayList<Estudiante>());
+        this("desconocido",new ArrayList<Estudiante>(), "1234");
     }
     
     @Override
@@ -64,8 +92,9 @@ public class Papito{
         }     
         acudidos += "]";
         
-        String cadena = "El acudiente " + nombre + " de identificacion "
-        + String.valueOf(ID) + " acude a los estudiantes : " + acudidos;
+        String cadena = "El acudiente " + nombre + " de identificacion " 
+        + String.valueOf(ID) + " Usuario: " + usuario + " Contraseña: " + 
+                clave + " acude a los estudiantes : " + acudidos;
         
         return cadena;
     }
