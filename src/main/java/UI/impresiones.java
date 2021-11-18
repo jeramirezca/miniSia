@@ -31,5 +31,34 @@ public class impresiones {
 
         }
     }
+   
+    public void imprimirObjeto (Estudiante estudiante){
+        String cadena = estudiante.toString();
+        System.out.println(cadena);
+    }
     
+    public void imprimirObjeto (Grupo grupo){
+        String cadena = grupo.toString();
+        System.out.println(cadena);
+    }
+    public void imprimirObjeto (Materia materia){
+        String cadena = materia.toString();
+        System.out.println(cadena);
+    }
+    public void imprimirObjeto (Nota nota){
+        String cadena = nota.toString();
+        System.out.println(cadena);
+    }
+    public void imprimirObjeto (Papito papito){
+        String cadena = papito.toString();
+        System.out.println(cadena);
+    }
+    public void imprimirObjeto (Profesor profesor){
+        String cadena = profesor.toString();
+        System.out.println(cadena);
+    }
+    public void imprimirObjeto (Subsidio subsidio){
+        String cadena = subsidio.toString();
+        System.out.println(cadena);
+    }
 }
