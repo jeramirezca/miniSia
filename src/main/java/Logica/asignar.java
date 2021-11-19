@@ -27,7 +27,7 @@ public class asignar {
     Subsidio tipoB = new Subsidio("B", 100.340, 1);
     Subsidio tipoC = new Subsidio("C", 320.340, 3);
 
-    public boolean asignarSubsidio(Estudiante solicitante, Subsidio tipo) {
+      public boolean asignarSubsidio(Estudiante solicitante, Subsidio tipo) {
 
         // Parte estudiante
         ArrayList<Subsidio> subsidiosDelEstudiante = solicitante.getSubsidios();
@@ -96,5 +96,5 @@ public class asignar {
         return comprobante_notas;
     }
     
-    
+
 }

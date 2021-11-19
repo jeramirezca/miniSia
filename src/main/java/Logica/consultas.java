@@ -9,8 +9,8 @@ import java.util.HashMap;
 
 public class consultas {
     
-    public  ArrayList<String> consultarNotas(Estudiante estudiante, Materia asignatura){
-        int id = estudiante.getID();
+    public ArrayList<String> consultarNotas(Estudiante estudiante, Materia asignatura){
+        String id = String.valueOf(estudiante.getID());
         ArrayList notaEstudiante = new ArrayList();
         ArrayList<Grupo> grupos = estudiante.getAtiende();
         int i = 0;
@@ -30,8 +30,10 @@ public class consultas {
         
         return notaEstudiante;  
     }
+    
+    //codigo de simon
     public ArrayList<String> consultarNotas(Estudiante estudiante){
-        int id = estudiante.getID();
+        String id = String.valueOf(estudiante.getID());
         ArrayList notasEstudiante = new ArrayList();
         ArrayList<Grupo> grupos = estudiante.getAtiende();
         HashMap notasDelGrupo;
@@ -46,13 +48,14 @@ public class consultas {
         return notasEstudiante;
     }
     
+    
     public ArrayList<String> consultarNotas(Papito acudiente){
         ArrayList<Estudiante> acudidos = acudiente.getAcudeA();
         ArrayList<String> notasEstudiantes = new ArrayList();
         for(Object objeto:acudidos){
             Estudiante estudiante = (Estudiante) objeto;
             String cadena = estudiante.getNombre() + ": ";
-            cadena += consultarNotas(estudiante); 
+            cadena += String.join(" ", consultarNotas(estudiante)); 
             notasEstudiantes.add(cadena);
            
         } 
@@ -60,6 +63,80 @@ public class consultas {
         return notasEstudiantes;
     }
     
+
+    
+ //codigo de simon
+    public ArrayList<String> recorrerArregloHorario(ArrayList<Grupo> grupos){
+        ArrayList<String> horario = new ArrayList();
+        for(Object grupo : grupos){
+            Grupo grupoObjeto = (Grupo) grupo;
+            String nombreMateria = grupoObjeto.getAsignatura().getNombre();
+            String horarioMateria = String.join(", ", grupoObjeto.getHorario());
+            String calendario = nombreMateria + " " + horarioMateria;
+            horario.add(calendario);
+        }
+        return horario;
+    }
+    
+    public ArrayList<String> consultarHorario(Estudiante estudiante){
+        ArrayList<Grupo> grupos = estudiante.getAtiende();
+        ArrayList<String> horario = recorrerArregloHorario(grupos);
+        String cadena = "HORARIO ESTUDIANTE: ";
+        horario.add(0,cadena);      
+        return horario;
+        
+    }
+    
+    //codigo de simon
+    public ArrayList<String> consultarHorario(Profesor profe){
+        ArrayList<Grupo> grupos = profe.getCursos();
+        ArrayList<String> horario = recorrerArregloHorario(grupos);
+        String cadena = "HORARIO PROFE: ";
+        horario.add(0,cadena);      
+        return horario;       
+    }
+    
+    public ArrayList<String> consultarHorario(Papito acudiente){
+        ArrayList<Estudiante> acudidos = acudiente.getAcudeA();
+        ArrayList<String> horarioEstudiantes = new ArrayList();
+        for(Object objeto:acudidos){
+            Estudiante estudiante = (Estudiante) objeto;
+            String cadena = estudiante.getNombre() + ": ";
+            cadena += String.join(" ", consultarHorario(estudiante)); 
+            horarioEstudiantes.add(cadena);          
+        }    
+        return horarioEstudiantes;
+    }
+    
+    //codigo de simon
+    public ArrayList<Profesor> consultarProfes(Estudiante estudiante){
+        ArrayList<Profesor> profesores = new ArrayList();
+        ArrayList<Grupo> grupos = estudiante.getAtiende();
+        for(Object grupo : grupos){
+            Grupo grupoEstudiante = (Grupo) grupo;
+            Profesor profe = grupoEstudiante.getProfesor();
+            profesores.add(profe);
+        }    
+        return profesores;
+    }
+    
+    public ArrayList<ArrayList> consultarProfes(Papito acudiente){
+        ArrayList<Estudiante> acudidos = acudiente.getAcudeA();
+        ArrayList<ArrayList> profesYestudiantes = new ArrayList();
+        for(Object objeto:acudidos){            
+            Estudiante estudiante = (Estudiante) objeto;
+            ArrayList lista = new ArrayList();
+            String nombreEstudiante = estudiante.getNombre() + ": ";
+            lista.add(nombreEstudiante);
+            ArrayList<Profesor> profesores = consultarProfes(estudiante); 
+            lista.add(profesores);
+            profesYestudiantes.add(lista);
+        }    
+        return profesYestudiantes;
+    }
+    
+    
+    //codigo mio
     public String consultarSubsidio(Estudiante consultor) {
         String respuesta = " ";
 
@@ -69,6 +146,7 @@ public class consultas {
             ArrayList<Subsidio> Lista_subsidios = consultor.getSubsidios();
 
             for (Subsidio i : Lista_subsidios) {
+                //String elemento = " ";
                 String valor_monetario = String.valueOf(i.getValor());
                 String duracion = String.valueOf(i.getDuracionSemestres());
                 String personas_usando = String.valueOf(i.getBeneficiarios().size());
@@ -82,10 +160,12 @@ public class consultas {
 
                 //respuesta.add(elemento);
             }
+
         }
         return respuesta;
     }
     
+/*
     //MEtodo 1: con estudiante y documento del profesor
     public String consultarProfesor(int documento_profe,Estudiante consultor){
         String respuesta = " ";
@@ -122,5 +202,6 @@ public class consultas {
          
         return respuesta;
     }
+*/
 
 }
