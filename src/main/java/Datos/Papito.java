@@ -62,7 +62,7 @@ public class Papito{
     
     public int randomID(){
         Random randomGenerator = new Random();
-        int id = randomGenerator.nextInt(1000);
+        int id = randomGenerator.nextInt(500-202) + 202; //genera valores entre 200 y 500 para la id del papito
         return id;
     }
     
