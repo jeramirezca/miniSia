@@ -3,12 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ui;
+import Datos.*;
+import Logica.*;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author juan manuel
  */
 public class uiProt extends javax.swing.JFrame {
+
+        ArrayList usuarios_estudiante = new ArrayList<Estudiante>(); 
+        ArrayList usuarios_profesor = new ArrayList<Profesor>();
+        ArrayList usuarios_papitos = new ArrayList<Papito>();
+        
+        
+        
 
     /**
      * Creates new form uiProt
@@ -27,23 +38,156 @@ public class uiProt extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        popupMenu1 = new java.awt.PopupMenu();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        interfazEstudiante = new javax.swing.JFrame();
+        mensajeBienvenida = new javax.swing.JLabel();
+        interfazProfesor = new javax.swing.JFrame();
+        mensajeBienvenida_ = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        interfazPapito = new javax.swing.JFrame();
+        mensajeBienvenidaPapito = new javax.swing.JLabel();
+        ingreso_fallido = new javax.swing.JDialog();
+        cerrar_ventana = new java.awt.Button();
+        label1 = new java.awt.Label();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         button1 = new java.awt.Button();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        clave_espacio = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         usuario_espacio = new javax.swing.JTextArea();
+        boton_iniciar = new javax.swing.JButton();
+        clave_espacio = new javax.swing.JPasswordField();
+
+        popupMenu1.setLabel("popupMenu1");
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        interfazEstudiante.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        javax.swing.GroupLayout interfazEstudianteLayout = new javax.swing.GroupLayout(interfazEstudiante.getContentPane());
+        interfazEstudiante.getContentPane().setLayout(interfazEstudianteLayout);
+        interfazEstudianteLayout.setHorizontalGroup(
+            interfazEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(interfazEstudianteLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(mensajeBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(195, Short.MAX_VALUE))
+        );
+        interfazEstudianteLayout.setVerticalGroup(
+            interfazEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(interfazEstudianteLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(mensajeBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(251, Short.MAX_VALUE))
+        );
+
+        interfazEstudiante.getAccessibleContext().setAccessibleDescription("");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 160, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout interfazProfesorLayout = new javax.swing.GroupLayout(interfazProfesor.getContentPane());
+        interfazProfesor.getContentPane().setLayout(interfazProfesorLayout);
+        interfazProfesorLayout.setHorizontalGroup(
+            interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(interfazProfesorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(mensajeBienvenida_, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        interfazProfesorLayout.setVerticalGroup(
+            interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(interfazProfesorLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(interfazProfesorLayout.createSequentialGroup()
+                        .addComponent(mensajeBienvenida_, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 225, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout interfazPapitoLayout = new javax.swing.GroupLayout(interfazPapito.getContentPane());
+        interfazPapito.getContentPane().setLayout(interfazPapitoLayout);
+        interfazPapitoLayout.setHorizontalGroup(
+            interfazPapitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(interfazPapitoLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(mensajeBienvenidaPapito, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(213, Short.MAX_VALUE))
+        );
+        interfazPapitoLayout.setVerticalGroup(
+            interfazPapitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(interfazPapitoLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addComponent(mensajeBienvenidaPapito, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(250, Short.MAX_VALUE))
+        );
+
+        cerrar_ventana.setLabel("Aceptar");
+        cerrar_ventana.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrar_ventanaActionPerformed(evt);
+            }
+        });
+
+        label1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        label1.setText("Lo siento, has ingresado incorrectamente los datos, vuelve a intentarlo.");
+
+        javax.swing.GroupLayout ingreso_fallidoLayout = new javax.swing.GroupLayout(ingreso_fallido.getContentPane());
+        ingreso_fallido.getContentPane().setLayout(ingreso_fallidoLayout);
+        ingreso_fallidoLayout.setHorizontalGroup(
+            ingreso_fallidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ingreso_fallidoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ingreso_fallidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cerrar_ventana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(129, 129, 129))
+        );
+        ingreso_fallidoLayout.setVerticalGroup(
+            ingreso_fallidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ingreso_fallidoLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(cerrar_ventana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(56, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MinisiaV1");
+        setBackground(new java.awt.Color(255, 255, 204));
 
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(255, 204, 0));
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("BIENVENIDO AL MiniSIA ");
         jTextArea1.setBorder(new javax.swing.border.MatteBorder(null));
@@ -57,14 +201,10 @@ public class uiProt extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-
-        clave_espacio.setColumns(20);
-        clave_espacio.setRows(5);
-        jScrollPane2.setViewportView(clave_espacio);
-
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Usuario");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Contraseña");
 
         jScrollPane4.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -73,58 +213,123 @@ public class uiProt extends javax.swing.JFrame {
         usuario_espacio.setRows(5);
         jScrollPane4.setViewportView(usuario_espacio);
 
+        boton_iniciar.setText("iniciar");
+        boton_iniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton_iniciarActionPerformed(evt);
+            }
+        });
+
+        clave_espacio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        clave_espacio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clave_espacioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(118, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(158, 158, 158)
+                                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(54, 54, 54)
+                                .addComponent(clave_espacio, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(104, 104, 104))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boton_iniciar)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(26, 26, 26)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(39, 39, 39))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(24, 24, 24)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(clave_espacio, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67))
+                .addGap(0, 0, 0)
+                .addComponent(boton_iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        boton_iniciar.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-         String usuarioActual = usuario_espacio.getText();
-         String claveActual = clave_espacio.getText();
+         
+                //Generando objetos para probar el sistema:
+     
+        // Prueba
+        
+        String id_usuario_ = usuario_espacio.getText();
+         int id_usuario = Integer.parseInt(id_usuario_);
+         String clave_usuario = clave_espacio.getText();
+         
+            if( id_usuario <= 200){
+            //busca entre profesores
+      
+            buscarProfesor(usuarios_profesor, id_usuario, clave_usuario );
+          
+        }
+        
+        if(id_usuario > 200 && id_usuario < 500){
+            //busca entre papito
+            buscarPapito(usuarios_papitos, id_usuario, clave_usuario );
+        }
+        
+        if(id_usuario >=600 && id_usuario <= 800){
+            //busca entre estudianto
+            buscarEstudiante(usuarios_estudiante, id_usuario, clave_usuario );
+        }
 
         // TODO add your handling code here:
     }//GEN-LAST:event_button1ActionPerformed
+
+    private void boton_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_iniciarActionPerformed
+        iniciarSia();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boton_iniciarActionPerformed
+
+    private void cerrar_ventanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_ventanaActionPerformed
+        ingreso_fallido.setVisible(false);
+    }//GEN-LAST:event_cerrar_ventanaActionPerformed
+
+    private void clave_espacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clave_espacioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clave_espacioActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+    
+   
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -155,17 +360,162 @@ public class uiProt extends javax.swing.JFrame {
             }
         });
     }
+    
+    //METODOS PARA EL LOGIN
+      public  void buscarProfesor(ArrayList<Profesor> lista, int id, String clave){
+        for(Profesor buscando: lista){
+            if(buscando.getID()== id && buscando.getClave().equals(clave)){
+                System.out.println("Bienvenido " + buscando.getNombre());
+                //Se llama a metodo que le muestra la interfaz al profesor.
+                interfazExitosa(buscando);
+               
+            }
+        }
+        //System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
+        //ingreso_fallido.setVisible(true);
+        //System.exit(1);
+    }
+    
+     public  void buscarPapito(ArrayList<Papito> lista, int id, String clave){
+        for(Papito buscando: lista){
+            if(buscando.getID()== id && buscando.getClave().equals(clave)){
+                System.out.println("Bienvenido " + buscando.getNombre());
+                //Se llama a metodo que le muestra la interfaz al papito.
+                interfazExitosa(buscando);
+            }
+        }
+        
+        //System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
+        //ingreso_fallido.setVisible(true);
+        //Hay un problema, y es con el login, si entras te sale la opción de volver a intentarlo
+        //System.exit(1);
+    }
+     
+      public  void buscarEstudiante(ArrayList<Estudiante> lista, int id, String clave){
+        for(Estudiante buscando: lista){
+            if(buscando.getID()== id && buscando.getClave().equals(clave)){
+                System.out.println("Bienvenido " + buscando.getNombre());
+   
+                //Se llama a metodo que le muestra la interfaz al profesor.
+                interfazExitosa(buscando);
+                 
+             
+            }
+        }
+        
+        //System.exit(1);
+    }
+      //-------------------
+      //METODO PARA "INICIAR" SISTEMA
+    
+    public void iniciarSia(){
+             for(int i= 0; i< 10; i++){
+            usuarios_papitos.add(new Papito());
+        }
+        
+        for(int j=0; j<5; j++){
+            usuarios_profesor.add(new Profesor());
+        }
+        
+        for(int k=0; k<20; k++){
+            usuarios_estudiante.add(new Estudiante());
+        }
+    
+        //
+        Estudiante est_prueb1 = (Estudiante) usuarios_estudiante.get(15);
+        Profesor est_prueb2 = (Profesor) usuarios_profesor.get(1);
+        Papito est_prueb3 = (Papito) usuarios_papitos.get(2);
+        est_prueb1.setNombre("Juan Cortes");
+        est_prueb2.setNombre("Arcenio Pecha");
+        est_prueb3.setNombre("Padre Cardenas");
+        
+        int id_1 = est_prueb1.getID();
+        String clave_1 = est_prueb1.getClave();
+        
+        int id_2 = est_prueb2.getID();
+        String clave_2 = est_prueb2.getClave();
+        
+        int id_3 = est_prueb3.getID();
+        String clave_3 = est_prueb3.getClave();
+        
+        
+        System.out.println("Datos para prueba "+ est_prueb1.getNombre() +"\n id: " +id_1  + "\n clave: " + clave_1);
+        System.out.println("Datos para prueba "+ est_prueb2.getNombre() +"\n id: " +id_2  + "\n clave: " + clave_2);
+        System.out.println("Datos para prueba "+ est_prueb3.getNombre() +"\n id: " +id_3  + "\n clave: " + clave_3);
+    }
+    
+    public void interfazFallida(){
+        ingreso_fallido.setTitle("Vuelve a intentarlo");
+         ingreso_fallido.locate(500, 500);
+        ingreso_fallido.setSize(300,300);
+        
+    }
+    
+    public void interfazExitosa( Estudiante encontrado){
+        jInternalFrame1.setVisible(false);
+        interfazEstudiante.setAlwaysOnTop(true);
+         interfazEstudiante.locate(500, 500);
+        interfazEstudiante.setVisible(true);
+        interfazEstudiante.setTitle("Interfaz Estudiante");
+        mensajeBienvenida.setText("Bienvenido " + encontrado.getNombre());
+        interfazEstudiante.setSize(700, 400);
+        
+    }
+    
+    public void interfazExitosa(Profesor encontrado){
+        mensajeBienvenida_.setVisible(true);
+        mensajeBienvenida_.setText("Bienvenido " + encontrado.getNombre());
+        interfazProfesor.setAlwaysOnTop(true);
+        interfazProfesor.locate(500, 500);
+        interfazProfesor.setVisible(true);
+        interfazProfesor.setTitle("Interfaz Profesor");
+        
+        interfazProfesor.setSize(700, 400);
+        
+    }
+    
+    public void interfazExitosa(Papito encontrado){
+          mensajeBienvenidaPapito.setVisible(true);
+       mensajeBienvenidaPapito.setText("Bienvenido " + encontrado.getNombre());
+       interfazPapito.setAlwaysOnTop(true);
+       interfazPapito.locate(500, 500);
+        interfazPapito.setVisible(true);
+        interfazPapito.setTitle("Interfaz Papito");
+        
+        interfazPapito.setSize(700, 400);
+    }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton boton_iniciar;
     private java.awt.Button button1;
     private javax.swing.ButtonGroup buttonGroup1;
-    public javax.swing.JTextArea clave_espacio;
+    private java.awt.Button cerrar_ventana;
+    private javax.swing.JPasswordField clave_espacio;
+    private javax.swing.JDialog ingreso_fallido;
+    private javax.swing.JFrame interfazEstudiante;
+    private javax.swing.JFrame interfazPapito;
+    private javax.swing.JFrame interfazProfesor;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
+    private java.awt.Label label1;
+    private javax.swing.JLabel mensajeBienvenida;
+    private javax.swing.JLabel mensajeBienvenidaPapito;
+    private javax.swing.JLabel mensajeBienvenida_;
+    private java.awt.PopupMenu popupMenu1;
     public javax.swing.JTextArea usuario_espacio;
     // End of variables declaration//GEN-END:variables
 }

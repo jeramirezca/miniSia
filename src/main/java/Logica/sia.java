@@ -9,16 +9,19 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
+
 /**
  *
  * @author juan manuel
  */
 public class sia {
 
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         
         ArrayList usuarios_estudiante = new ArrayList<Estudiante>(); 
         ArrayList usuarios_profesor = new ArrayList<Profesor>();
@@ -59,6 +62,8 @@ public class sia {
         
         Prueba del sistema de login exitosa
         */
+        
+        /*
         System.out.println("Hola parfavar ingresa ID:");
         
         Scanner sc = new Scanner (System.in);
@@ -87,42 +92,8 @@ public class sia {
         }
         
         // TODO code application logic here
-        
+        */
     }
     
-    public static void buscarProfesor(ArrayList<Profesor> lista, int id, String clave){
-        for(Profesor buscando: lista){
-            if(buscando.getID()== id && buscando.getClave().equals(clave)){
-                System.out.println("Bienvenido " + buscando.getNombre());
-                //Se llama a metodo que le muestra la interfaz al profesor.
-                System.exit(0);
-            }
-        }
-        System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
-        System.exit(1);
-    }
-    
-     public static void buscarPapito(ArrayList<Papito> lista, int id, String clave){
-        for(Papito buscando: lista){
-            if(buscando.getID()== id && buscando.getClave().equals(clave)){
-                System.out.println("Bienvenido " + buscando.getNombre());
-                //Se llama a metodo que le muestra la interfaz al papito.
-                System.exit(0);
-            }
-        }
-        System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
-        System.exit(1);
-    }
-     
-      public static void buscarEstudiante(ArrayList<Estudiante> lista, int id, String clave){
-        for(Estudiante buscando: lista){
-            if(buscando.getID()== id && buscando.getClave().equals(clave)){
-                System.out.println("Bienvenido " + buscando.getNombre());
-                //Se llama a metodo que le muestra la interfaz al profesor.
-                System.exit(0);
-            }
-        }
-        System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
-        System.exit(1);
-    }
+  
 }
