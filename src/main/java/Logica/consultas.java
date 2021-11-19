@@ -201,7 +201,19 @@ public class consultas {
                 +"\n Grupos dictados: " + consultado.getCursos() ; 
          
         return respuesta;
+    
     }
 */
+    
+    public Grupo buscarGrupo (Estudiante consultor, int numero){
+        Grupo encontrado = new Grupo();
+        ArrayList<Grupo> gruposEstudiante = consultor.getAtiende();
+        for(Grupo buscando: gruposEstudiante){
+            if(buscando.getNumero()== numero){
+                encontrado =  buscando;
+            }
+        }
+        return encontrado;
+    }
 
 }
