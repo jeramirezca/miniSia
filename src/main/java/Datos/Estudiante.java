@@ -82,7 +82,7 @@ public class Estudiante{
     }
     public int randomID(){
         Random randomGenerator = new Random();
-        int id = randomGenerator.nextInt(1000);
+        int id = randomGenerator.nextInt(800-600) +600; //genera valores entre 800 y 600 para el estudianto.
         return id;
     }
     

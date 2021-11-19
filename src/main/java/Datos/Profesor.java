@@ -64,7 +64,7 @@ public class Profesor{
     
     public int randomID(){
         Random randomGenerator = new Random();
-        int id = randomGenerator.nextInt(1000);
+        int id = randomGenerator.nextInt(201); //los profesores tienen IDs de 0 a 200.
         return id;
     }
     
