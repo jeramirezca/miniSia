@@ -96,5 +96,17 @@ public class asignar {
         return comprobante_notas;
     }
     
+    
+       public Grupo buscarGrupo (Profesor consultor, int numero){
+        Grupo encontrado = new Grupo();
+        ArrayList<Grupo> gruposProfesor = consultor.getCursos();
+        for(Grupo buscando: gruposProfesor){
+            if(buscando.getNumero()== numero){
+                encontrado =  buscando;
+            }
+        }
+        return encontrado;
+    }
+    
 
 }
