@@ -386,7 +386,7 @@ public class uiProt extends javax.swing.JFrame {
         }
         
         //System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
-        //ingreso_fallido.setVisible(true);
+        ingreso_fallido.setVisible(true);
         //Hay un problema, y es con el login, si entras te sale la opción de volver a intentarlo
         //System.exit(1);
     }
@@ -447,7 +447,7 @@ public class uiProt extends javax.swing.JFrame {
     public void interfazFallida(){
         ingreso_fallido.setTitle("Vuelve a intentarlo");
          ingreso_fallido.locate(500, 500);
-        ingreso_fallido.setSize(300,300);
+        ingreso_fallido.setSize(400,300);
         
     }
     
@@ -458,6 +458,7 @@ public class uiProt extends javax.swing.JFrame {
         interfazEstudiante.setVisible(true);
         interfazEstudiante.setTitle("Interfaz Estudiante");
         mensajeBienvenida.setText("Bienvenido " + encontrado.getNombre());
+        //mensajeBienvenida.setVisible(false);
         interfazEstudiante.setSize(700, 400);
         
     }
