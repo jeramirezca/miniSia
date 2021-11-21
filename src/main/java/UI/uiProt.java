@@ -14,11 +14,15 @@ import javax.swing.JOptionPane;
  */
 public class uiProt extends javax.swing.JFrame {
 
+    //Objetos globales, lista de estudiantes, profes
         ArrayList usuarios_estudiante = new ArrayList<Estudiante>(); 
         ArrayList usuarios_profesor = new ArrayList<Profesor>();
         ArrayList usuarios_papitos = new ArrayList<Papito>();
         
-        
+        //Estos objetos sirven para cada sesion, para poder comunicar datos entre las interfaces
+        ArrayList  est_actual = new ArrayList<Estudiante>();
+         ArrayList prof_actual = new ArrayList<Profesor>();
+         ArrayList pap_actual = new ArrayList<Papito>();
         
 
     /**
@@ -776,6 +780,7 @@ public class uiProt extends javax.swing.JFrame {
         for(Profesor buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 noSeEncontro = false;
+                prof_actual.add(buscando);
                 System.out.println("Bienvenido " + buscando.getNombre());
                 //Se llama a metodo que le muestra la interfaz al profesor.
                 interfazExitosa(buscando);
@@ -795,6 +800,7 @@ public class uiProt extends javax.swing.JFrame {
         for(Papito buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 noSeEncontro = false;
+                pap_actual.add(buscando);
                 System.out.println("Bienvenido " + buscando.getNombre());
                 //Se llama a metodo que le muestra la interfaz al papito.
                 interfazExitosa(buscando);
@@ -817,7 +823,7 @@ public class uiProt extends javax.swing.JFrame {
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 System.out.println("Bienvenido " + buscando.getNombre());
                 noSeEncontro = false;
-   
+                est_actual.add(buscando);
                 //Se llama a metodo que le muestra la interfaz al profesor.
                 interfazExitosa(buscando);
                  
@@ -911,6 +917,12 @@ public class uiProt extends javax.swing.JFrame {
         interfazPapito.setTitle("Interfaz Papito");
         
         interfazPapito.setSize(500, 400);
+    }
+    
+    public void cerrarSesion (){
+        est_actual.remove(0);
+        prof_actual.remove(0);
+        pap_actual.remove(0);
     }
 
     
