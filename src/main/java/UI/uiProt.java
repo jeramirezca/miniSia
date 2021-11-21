@@ -77,20 +77,16 @@ public class uiProt extends javax.swing.JFrame {
         label1 = new java.awt.Label();
         interfaz_horario = new javax.swing.JFrame();
         jPanel6 = new javax.swing.JPanel();
+        label_horario = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        btn_mostrarHorario = new javax.swing.JButton();
         interfaz_consultaSubsidio = new javax.swing.JFrame();
         jPanel4 = new javax.swing.JPanel();
+        label_subsidios = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        btn_mostrarSub = new javax.swing.JButton();
         interfaz_info = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        label_nombre = new javax.swing.JLabel();
-        label_id = new javax.swing.JLabel();
-        label_usuario = new javax.swing.JLabel();
-        label_edad = new javax.swing.JLabel();
-        label_adicional = new javax.swing.JLabel();
+        label_infopersonal = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -405,21 +401,20 @@ public class uiProt extends javax.swing.JFrame {
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 378, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_horario)
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_horario, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jLabel9.setText("Este es tu horario: ");
-
-        btn_mostrarHorario.setText("Consultar Horario");
-        btn_mostrarHorario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_mostrarHorarioActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout interfaz_horarioLayout = new javax.swing.GroupLayout(interfaz_horario.getContentPane());
         interfaz_horario.getContentPane().setLayout(interfaz_horarioLayout);
@@ -431,10 +426,7 @@ public class uiProt extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(interfaz_horarioLayout.createSequentialGroup()
                         .addComponent(jLabel9)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, interfaz_horarioLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn_mostrarHorario)))
+                        .addGap(0, 288, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         interfaz_horarioLayout.setVerticalGroup(
@@ -444,9 +436,7 @@ public class uiProt extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_mostrarHorario)
-                .addGap(22, 22, 22))
+                .addGap(56, 56, 56))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -455,16 +445,20 @@ public class uiProt extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_subsidios)
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 159, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(label_subsidios, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jLabel8.setText("Subsidios de los que haces parte");
-
-        btn_mostrarSub.setText("Consultar");
 
         javax.swing.GroupLayout interfaz_consultaSubsidioLayout = new javax.swing.GroupLayout(interfaz_consultaSubsidio.getContentPane());
         interfaz_consultaSubsidio.getContentPane().setLayout(interfaz_consultaSubsidioLayout);
@@ -476,10 +470,7 @@ public class uiProt extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(interfaz_consultaSubsidioLayout.createSequentialGroup()
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 203, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, interfaz_consultaSubsidioLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btn_mostrarSub, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 203, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         interfaz_consultaSubsidioLayout.setVerticalGroup(
@@ -489,29 +480,12 @@ public class uiProt extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_mostrarSub)
-                .addGap(43, 43, 43))
+                .addGap(77, 77, 77))
         );
 
         jPanel2.setBorder(new javax.swing.border.MatteBorder(null));
 
         jLabel7.setText("Esto es lo que el sistema sabe de ti:");
-
-        label_nombre.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        label_nombre.setText("- ");
-
-        label_id.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        label_id.setText("- ");
-
-        label_usuario.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        label_usuario.setText("-");
-
-        label_edad.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        label_edad.setText("-");
-
-        label_adicional.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
-        label_adicional.setText("-");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -520,31 +494,20 @@ public class uiProt extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(label_adicional, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label_edad, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(label_id, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
-                        .addComponent(label_nombre, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(127, Short.MAX_VALUE))
+                    .addComponent(label_infopersonal)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 117, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(label_nombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label_id)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(label_edad)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(label_usuario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(label_adicional)
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addComponent(label_infopersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout interfaz_infoLayout = new javax.swing.GroupLayout(interfaz_info.getContentPane());
@@ -718,11 +681,6 @@ public class uiProt extends javax.swing.JFrame {
     private void clave_espacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clave_espacioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clave_espacioActionPerformed
-
-    private void btn_mostrarHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_mostrarHorarioActionPerformed
-        // TODO add your handling code here:
-       
-    }//GEN-LAST:event_btn_mostrarHorarioActionPerformed
 
     private void btn_consultarInfoP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarInfoP1ActionPerformed
         // TODO add your handling code here:
@@ -951,8 +909,6 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JButton btn_consultarProfesores;
     private javax.swing.JButton btn_consultarProfesores1;
     private javax.swing.JButton btn_consultarSubsidio;
-    private javax.swing.JButton btn_mostrarHorario;
-    private javax.swing.JButton btn_mostrarSub;
     private java.awt.Button button1;
     private javax.swing.ButtonGroup buttonGroup1;
     private java.awt.Button cerrar_ventana;
@@ -985,11 +941,9 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
     private java.awt.Label label1;
-    private javax.swing.JLabel label_adicional;
-    private javax.swing.JLabel label_edad;
-    private javax.swing.JLabel label_id;
-    private javax.swing.JLabel label_nombre;
-    private javax.swing.JLabel label_usuario;
+    private javax.swing.JTextField label_horario;
+    private javax.swing.JTextField label_infopersonal;
+    private javax.swing.JTextField label_subsidios;
     private javax.swing.JLabel mensajeBienvenida;
     private javax.swing.JLabel mensajeBienvenidaPapito;
     private javax.swing.JLabel mensajeBienvenida_;
