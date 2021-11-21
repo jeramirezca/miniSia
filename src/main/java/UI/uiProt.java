@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package ui;
+package UI;
 import Datos.*;
 import Logica.*;
 import java.util.ArrayList;
@@ -50,6 +50,10 @@ public class uiProt extends javax.swing.JFrame {
         ingreso_fallido = new javax.swing.JDialog();
         cerrar_ventana = new java.awt.Button();
         label1 = new java.awt.Label();
+        interfaz_consultaHorarios = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
+        jFrame3 = new javax.swing.JFrame();
+        jFrame4 = new javax.swing.JFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         button1 = new java.awt.Button();
@@ -176,6 +180,50 @@ public class uiProt extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addComponent(cerrar_ventana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(56, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout interfaz_consultaHorariosLayout = new javax.swing.GroupLayout(interfaz_consultaHorarios.getContentPane());
+        interfaz_consultaHorarios.getContentPane().setLayout(interfaz_consultaHorariosLayout);
+        interfaz_consultaHorariosLayout.setHorizontalGroup(
+            interfaz_consultaHorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        interfaz_consultaHorariosLayout.setVerticalGroup(
+            interfaz_consultaHorariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame3Layout = new javax.swing.GroupLayout(jFrame3.getContentPane());
+        jFrame3.getContentPane().setLayout(jFrame3Layout);
+        jFrame3Layout.setHorizontalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame3Layout.setVerticalGroup(
+            jFrame3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame4Layout = new javax.swing.GroupLayout(jFrame4.getContentPane());
+        jFrame4.getContentPane().setLayout(jFrame4Layout);
+        jFrame4Layout.setHorizontalGroup(
+            jFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame4Layout.setVerticalGroup(
+            jFrame4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -363,38 +411,51 @@ public class uiProt extends javax.swing.JFrame {
     
     //METODOS PARA EL LOGIN
       public  void buscarProfesor(ArrayList<Profesor> lista, int id, String clave){
+          boolean noSeEncontro = true;
         for(Profesor buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
+                noSeEncontro = false;
                 System.out.println("Bienvenido " + buscando.getNombre());
                 //Se llama a metodo que le muestra la interfaz al profesor.
                 interfazExitosa(buscando);
+                
                
             }
         }
         //System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
-        //ingreso_fallido.setVisible(true);
+        if(noSeEncontro){
+            interfazFallida();
+        }
         //System.exit(1);
     }
     
      public  void buscarPapito(ArrayList<Papito> lista, int id, String clave){
+         boolean noSeEncontro = true;
         for(Papito buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
+                noSeEncontro = false;
                 System.out.println("Bienvenido " + buscando.getNombre());
                 //Se llama a metodo que le muestra la interfaz al papito.
                 interfazExitosa(buscando);
+                
             }
         }
         
         //System.out.println("Id y/o clave incorrectos. Vuelva a intentar");
-        ingreso_fallido.setVisible(true);
+        if(noSeEncontro){
+           interfazFallida();
+        }
+        
         //Hay un problema, y es con el login, si entras te sale la opción de volver a intentarlo
         //System.exit(1);
     }
      
       public  void buscarEstudiante(ArrayList<Estudiante> lista, int id, String clave){
+          boolean noSeEncontro = true;
         for(Estudiante buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 System.out.println("Bienvenido " + buscando.getNombre());
+                noSeEncontro = false;
    
                 //Se llama a metodo que le muestra la interfaz al profesor.
                 interfazExitosa(buscando);
@@ -402,7 +463,9 @@ public class uiProt extends javax.swing.JFrame {
              
             }
         }
-        
+        if(noSeEncontro){
+            interfazFallida();
+        }
         //System.exit(1);
     }
       //-------------------
@@ -445,9 +508,10 @@ public class uiProt extends javax.swing.JFrame {
     }
     
     public void interfazFallida(){
+        ingreso_fallido.setVisible(true);
         ingreso_fallido.setTitle("Vuelve a intentarlo");
          ingreso_fallido.locate(500, 500);
-        ingreso_fallido.setSize(400,300);
+        ingreso_fallido.setSize(600,200);
         
     }
     
@@ -505,6 +569,10 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JFrame interfazEstudiante;
     private javax.swing.JFrame interfazPapito;
     private javax.swing.JFrame interfazProfesor;
+    private javax.swing.JFrame interfaz_consultaHorarios;
+    private javax.swing.JFrame jFrame2;
+    private javax.swing.JFrame jFrame3;
+    private javax.swing.JFrame jFrame4;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
