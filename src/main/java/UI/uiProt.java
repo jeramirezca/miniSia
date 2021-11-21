@@ -23,6 +23,8 @@ public class uiProt extends javax.swing.JFrame {
         ArrayList  est_actual = new ArrayList<Estudiante>();
          ArrayList prof_actual = new ArrayList<Profesor>();
          ArrayList pap_actual = new ArrayList<Papito>();
+         
+         consultas logica_consultas = new consultas();
         
 
     /**
@@ -68,7 +70,7 @@ public class uiProt extends javax.swing.JFrame {
         btn_consultarNota1 = new javax.swing.JButton();
         btn_consultarHorario1 = new javax.swing.JButton();
         btn_consultarProfesores1 = new javax.swing.JButton();
-        btn_consultarInfoP1 = new javax.swing.JButton();
+        btn_consultarInfoPap = new javax.swing.JButton();
         asignacion1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         btn_asgClave1 = new javax.swing.JButton();
@@ -86,11 +88,15 @@ public class uiProt extends javax.swing.JFrame {
         interfaz_info = new javax.swing.JFrame();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        label_infopersonal = new javax.swing.JTextField();
+        label_nombre = new javax.swing.JLabel();
+        label_usuario = new javax.swing.JLabel();
+        label_id = new javax.swing.JLabel();
+        label_correo = new javax.swing.JLabel();
+        label_edad = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        button1 = new java.awt.Button();
+        ingresarUsuario = new java.awt.Button();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -125,6 +131,11 @@ public class uiProt extends javax.swing.JFrame {
         btn_consultarHorario.setText("Horario");
 
         btn_consultarSubsidio.setText("Subsidio");
+        btn_consultarSubsidio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_consultarSubsidioActionPerformed(evt);
+            }
+        });
 
         btn_consultarProfesores.setText("Profesores");
 
@@ -271,13 +282,18 @@ public class uiProt extends javax.swing.JFrame {
         btn_consultarNota1.setText("Nota");
 
         btn_consultarHorario1.setText("Horario");
+        btn_consultarHorario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_consultarHorario1ActionPerformed(evt);
+            }
+        });
 
         btn_consultarProfesores1.setText("Profesores");
 
-        btn_consultarInfoP1.setText("Info. Personal");
-        btn_consultarInfoP1.addActionListener(new java.awt.event.ActionListener() {
+        btn_consultarInfoPap.setText("Info. Personal");
+        btn_consultarInfoPap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_consultarInfoP1ActionPerformed(evt);
+                btn_consultarInfoPapActionPerformed(evt);
             }
         });
 
@@ -291,7 +307,7 @@ public class uiProt extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(btn_consultarHorario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_consultarProfesores1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_consultarInfoP1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_consultarInfoPap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_consultarNota1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(128, Short.MAX_VALUE))
         );
@@ -307,7 +323,7 @@ public class uiProt extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_consultarProfesores1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_consultarInfoP1)
+                .addComponent(btn_consultarInfoPap)
                 .addContainerGap(61, Short.MAX_VALUE))
         );
 
@@ -397,6 +413,8 @@ public class uiProt extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        label_horario.setEditable(false);
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -441,13 +459,20 @@ public class uiProt extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        label_subsidios.setEditable(false);
+        label_subsidios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                label_subsidiosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(label_subsidios)
+                .addComponent(label_subsidios, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -469,8 +494,8 @@ public class uiProt extends javax.swing.JFrame {
                 .addGroup(interfaz_consultaSubsidioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(interfaz_consultaSubsidioLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 203, Short.MAX_VALUE)))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         interfaz_consultaSubsidioLayout.setVerticalGroup(
@@ -487,6 +512,16 @@ public class uiProt extends javax.swing.JFrame {
 
         jLabel7.setText("Esto es lo que el sistema sabe de ti:");
 
+        label_nombre.setText("   ");
+
+        label_usuario.setText("   ");
+
+        label_id.setText("   ");
+
+        label_correo.setText("  ");
+
+        label_edad.setText("   ");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -494,10 +529,15 @@ public class uiProt extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(label_infopersonal)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 117, Short.MAX_VALUE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                            .addComponent(label_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 117, Short.MAX_VALUE))
+                    .addComponent(label_usuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(label_correo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(label_edad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(label_id, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -506,8 +546,16 @@ public class uiProt extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(label_infopersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addComponent(label_nombre)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label_id)
+                .addGap(13, 13, 13)
+                .addComponent(label_usuario)
+                .addGap(18, 18, 18)
+                .addComponent(label_edad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label_correo)
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout interfaz_infoLayout = new javax.swing.GroupLayout(interfaz_info.getContentPane());
@@ -553,11 +601,11 @@ public class uiProt extends javax.swing.JFrame {
         jTextArea1.setBorder(new javax.swing.border.MatteBorder(null));
         jScrollPane1.setViewportView(jTextArea1);
 
-        button1.setActionCommand("ingresarUsuario");
-        button1.setLabel("Ingresar");
-        button1.addActionListener(new java.awt.event.ActionListener() {
+        ingresarUsuario.setActionCommand("ingresarUsuario");
+        ingresarUsuario.setLabel("Ingresar");
+        ingresarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+                ingresarUsuarioActionPerformed(evt);
             }
         });
 
@@ -603,7 +651,7 @@ public class uiProt extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(158, 158, 158)
-                                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(ingresarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(54, 54, 54)
                                 .addComponent(clave_espacio, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -628,7 +676,7 @@ public class uiProt extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(clave_espacio, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ingresarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(boton_iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -639,7 +687,7 @@ public class uiProt extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+    private void ingresarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarUsuarioActionPerformed
          
                 //Generando objetos para probar el sistema:
      
@@ -667,7 +715,7 @@ public class uiProt extends javax.swing.JFrame {
         }
 
         // TODO add your handling code here:
-    }//GEN-LAST:event_button1ActionPerformed
+    }//GEN-LAST:event_ingresarUsuarioActionPerformed
 
     private void boton_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_iniciarActionPerformed
         iniciarSia();
@@ -682,8 +730,9 @@ public class uiProt extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clave_espacioActionPerformed
 
-    private void btn_consultarInfoP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarInfoP1ActionPerformed
+    private void btn_consultarInfoPapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarInfoPapActionPerformed
         // TODO add your handling code here:
+        Papito consultor =  (Papito) pap_actual.get(0);
         //jInternalFrame1.setVisible(false);
         interfaz_info.setAlwaysOnTop(true);
          interfaz_info.locate(300, 500);
@@ -691,7 +740,51 @@ public class uiProt extends javax.swing.JFrame {
         interfaz_info.setTitle("Informacion Personal");
         //mensajeBienvenida.setVisible(false);
         interfaz_info.setSize(500, 300);
-    }//GEN-LAST:event_btn_consultarInfoP1ActionPerformed
+        label_nombre.setText("- Nombre: "+ consultor.getNombre());
+        label_id.setText("- ID: "+ consultor.getID());
+        label_usuario.setText("- Usuario: "+ consultor.getUsuario());
+       
+    }//GEN-LAST:event_btn_consultarInfoPapActionPerformed
+
+    private void btn_consultarHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarHorario1ActionPerformed
+        // TODO add your handling code here:
+        
+        
+          interfaz_horario.setAlwaysOnTop(true);
+         interfaz_horario.locate(300, 500);
+        interfaz_horario.setVisible(true);
+        interfaz_horario.setTitle("Horario");
+        //mensajeBienvenida.setVisible(false);
+        interfaz_horario.setSize(500, 300);
+        /*
+        Papito consultante = (Papito) pap_actual.get(0);
+        ArrayList horario = new ArrayList<String>();
+        horario = logica_consultas.consultarHorario(consultante);
+       
+       ´Pendiente ver como arreglar esto del horario, para que salga algo xd
+        tambien pendiente ver como hacer saltos de linea xd
+        */
+       
+       
+        
+       label_horario.setText("El textfield funciona");
+    }//GEN-LAST:event_btn_consultarHorario1ActionPerformed
+
+    private void label_subsidiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_subsidiosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_label_subsidiosActionPerformed
+
+    private void btn_consultarSubsidioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarSubsidioActionPerformed
+        // TODO add your handling code here:
+        interfaz_consultaSubsidio.setAlwaysOnTop(true);
+        interfaz_consultaSubsidio.locate(300, 500);
+        interfaz_consultaSubsidio.setVisible(true);
+        interfaz_consultaSubsidio.setTitle("Horario");
+        //mensajeBienvenida.setVisible(false);
+        interfaz_consultaSubsidio.setSize(500, 300);
+        label_subsidios.setText("El textField funciona");
+        
+    }//GEN-LAST:event_btn_consultarSubsidioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -739,7 +832,9 @@ public class uiProt extends javax.swing.JFrame {
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 noSeEncontro = false;
                 prof_actual.add(buscando);
+            
                 System.out.println("Bienvenido " + buscando.getNombre());
+                System.out.println(prof_actual);
                 //Se llama a metodo que le muestra la interfaz al profesor.
                 interfazExitosa(buscando);
                 
@@ -758,8 +853,10 @@ public class uiProt extends javax.swing.JFrame {
         for(Papito buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 noSeEncontro = false;
-                pap_actual.add(buscando);
+                
                 System.out.println("Bienvenido " + buscando.getNombre());
+                pap_actual.add(buscando);
+                 System.out.println(pap_actual);
                 //Se llama a metodo que le muestra la interfaz al papito.
                 interfazExitosa(buscando);
                 
@@ -782,6 +879,7 @@ public class uiProt extends javax.swing.JFrame {
                 System.out.println("Bienvenido " + buscando.getNombre());
                 noSeEncontro = false;
                 est_actual.add(buscando);
+                System.out.println(est_actual);
                 //Se llama a metodo que le muestra la interfaz al profesor.
                 interfazExitosa(buscando);
                  
@@ -867,6 +965,11 @@ public class uiProt extends javax.swing.JFrame {
     }
     
     public void interfazExitosa(Papito encontrado){
+        //prueba set
+        //Papito pruebaSet = (Papito) pap_actual.get(0);
+        //pruebaSet.setUsuario("vivaAmlo");
+        //aparentemente al setear el objeto desde otro objeto, se guarda en el objeto original
+        //
           mensajeBienvenidaPapito.setVisible(true);
        mensajeBienvenidaPapito.setText("Bienvenido " + encontrado.getNombre());
        interfazPapito.setAlwaysOnTop(true);
@@ -903,18 +1006,18 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JButton btn_consultarHorario;
     private javax.swing.JButton btn_consultarHorario1;
     private javax.swing.JButton btn_consultarInfoP;
-    private javax.swing.JButton btn_consultarInfoP1;
+    private javax.swing.JButton btn_consultarInfoPap;
     private javax.swing.JButton btn_consultarNota;
     private javax.swing.JButton btn_consultarNota1;
     private javax.swing.JButton btn_consultarProfesores;
     private javax.swing.JButton btn_consultarProfesores1;
     private javax.swing.JButton btn_consultarSubsidio;
-    private java.awt.Button button1;
     private javax.swing.ButtonGroup buttonGroup1;
     private java.awt.Button cerrar_ventana;
     private javax.swing.JPasswordField clave_espacio;
     private javax.swing.JPanel consultas;
     private javax.swing.JPanel consultas1;
+    private java.awt.Button ingresarUsuario;
     private javax.swing.JDialog ingreso_fallido;
     private javax.swing.JFrame interfazEstudiante;
     private javax.swing.JFrame interfazPapito;
@@ -941,9 +1044,13 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
     private java.awt.Label label1;
+    private javax.swing.JLabel label_correo;
+    private javax.swing.JLabel label_edad;
     private javax.swing.JTextField label_horario;
-    private javax.swing.JTextField label_infopersonal;
+    private javax.swing.JLabel label_id;
+    private javax.swing.JLabel label_nombre;
     private javax.swing.JTextField label_subsidios;
+    private javax.swing.JLabel label_usuario;
     private javax.swing.JLabel mensajeBienvenida;
     private javax.swing.JLabel mensajeBienvenidaPapito;
     private javax.swing.JLabel mensajeBienvenida_;

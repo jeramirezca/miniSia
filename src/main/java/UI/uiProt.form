@@ -140,6 +140,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Subsidio"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_consultarSubsidioActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_consultarProfesores">
               <Properties>
@@ -318,7 +321,7 @@
                           <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_consultarHorario1" alignment="0" max="32767" attributes="0"/>
                           <Component id="btn_consultarProfesores1" alignment="0" max="32767" attributes="0"/>
-                          <Component id="btn_consultarInfoP1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btn_consultarInfoPap" alignment="0" max="32767" attributes="0"/>
                           <Component id="btn_consultarNota1" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="128" max="32767" attributes="0"/>
@@ -337,7 +340,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btn_consultarProfesores1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btn_consultarInfoP1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btn_consultarInfoPap" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="61" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -361,18 +364,21 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Horario"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_consultarHorario1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_consultarProfesores1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Profesores"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="btn_consultarInfoP1">
+            <Component class="javax.swing.JButton" name="btn_consultarInfoPap">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Info. Personal"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_consultarInfoP1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_consultarInfoPapActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -539,6 +545,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="label_horario">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -559,8 +568,8 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel4" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Component id="jLabel8" min="-2" pref="177" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="203" max="32767" attributes="0"/>
+                          <Component id="jLabel8" min="-2" pref="266" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -594,7 +603,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="label_subsidios" max="32767" attributes="0"/>
+                      <Component id="label_subsidios" pref="358" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -611,6 +620,12 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JTextField" name="label_subsidios">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="label_subsidiosActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -656,14 +671,20 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="label_infopersonal" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel7" min="-2" pref="241" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel7" pref="241" max="32767" attributes="0"/>
+                                  <Component id="label_nombre" max="32767" attributes="0"/>
+                              </Group>
                               <EmptySpace min="0" pref="117" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="label_usuario" alignment="0" max="32767" attributes="0"/>
+                          <Component id="label_correo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="label_edad" alignment="0" max="32767" attributes="0"/>
+                          <Component id="label_id" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -675,8 +696,16 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="label_infopersonal" min="-2" pref="106" max="-2" attributes="0"/>
-                      <EmptySpace pref="87" max="32767" attributes="0"/>
+                      <Component id="label_nombre" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="label_id" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Component id="label_usuario" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="label_edad" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="label_correo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="70" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -687,7 +716,30 @@
                 <Property name="text" type="java.lang.String" value="Esto es lo que el sistema sabe de ti:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="label_infopersonal">
+            <Component class="javax.swing.JLabel" name="label_nombre">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="   "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_usuario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="   "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_id">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="   "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_correo">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="  "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="label_edad">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="   "/>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -748,7 +800,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-                              <Component id="button1" min="-2" max="-2" attributes="0"/>
+                              <Component id="ingresarUsuario" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
@@ -784,7 +836,7 @@
                   <Component id="clave_espacio" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-              <Component id="button1" min="-2" max="-2" attributes="0"/>
+              <Component id="ingresarUsuario" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="boton_iniciar" min="-2" pref="23" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -824,13 +876,13 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="java.awt.Button" name="button1">
+    <Component class="java.awt.Button" name="ingresarUsuario">
       <Properties>
         <Property name="actionCommand" type="java.lang.String" value="ingresarUsuario"/>
         <Property name="label" type="java.lang.String" value="Ingresar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ingresarUsuarioActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
