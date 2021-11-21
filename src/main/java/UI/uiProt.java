@@ -497,6 +497,8 @@ public class uiProt extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(239, 123, 69));
 
+        mensajeBienvenidaPapito.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        mensajeBienvenidaPapito.setForeground(new java.awt.Color(255, 255, 255));
         mensajeBienvenidaPapito.setText("  ");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -526,7 +528,7 @@ public class uiProt extends javax.swing.JFrame {
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 44, Short.MAX_VALUE)
+            .addGap(0, 41, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout interfazPapitoLayout = new javax.swing.GroupLayout(interfazPapito.getContentPane());
