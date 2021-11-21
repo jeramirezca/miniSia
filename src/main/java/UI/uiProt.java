@@ -61,26 +61,43 @@ public class uiProt extends javax.swing.JFrame {
         btn_asgClave = new javax.swing.JButton();
         btn_asgSub = new javax.swing.JButton();
         interfazProfesor = new javax.swing.JFrame();
-        mensajeBienvenida_ = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        consulta = new javax.swing.JPanel();
+        btn_consultaHorarioProfe = new javax.swing.JButton();
+        btn_consultaInfoProfe = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        mensajeBienvenidaProfesor = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        asign = new javax.swing.JPanel();
+        btn_asignNota = new javax.swing.JButton();
+        btn_cambiarClaveProfe = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
         interfazPapito = new javax.swing.JFrame();
-        mensajeBienvenidaPapito = new javax.swing.JLabel();
         consultas1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        btn_consultarNota1 = new javax.swing.JButton();
-        btn_consultarHorario1 = new javax.swing.JButton();
-        btn_consultarProfesores1 = new javax.swing.JButton();
+        btn_consultarNotaPapito = new javax.swing.JButton();
+        btn_consultarHorarioPapito = new javax.swing.JButton();
+        btn_consultarProfesoresPapito = new javax.swing.JButton();
         btn_consultarInfoPap = new javax.swing.JButton();
         asignacion1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         btn_asgClave1 = new javax.swing.JButton();
+        jPanel8 = new javax.swing.JPanel();
+        mensajeBienvenidaPapito = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
         ingreso_fallido = new javax.swing.JDialog();
         cerrar_ventana = new java.awt.Button();
         label1 = new java.awt.Label();
         interfaz_horario = new javax.swing.JFrame();
         jPanel6 = new javax.swing.JPanel();
-        label_horario = new javax.swing.JTextField();
+        label_horarioLunes = new javax.swing.JTextField();
+        label_horarioMiercoles = new javax.swing.JTextField();
+        label_horarioMartes = new javax.swing.JTextField();
+        label_horarioJueves = new javax.swing.JTextField();
+        label_horarioViernes = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
         interfaz_consultaSubsidio = new javax.swing.JFrame();
         jPanel4 = new javax.swing.JPanel();
         label_subsidios = new javax.swing.JTextField();
@@ -93,7 +110,11 @@ public class uiProt extends javax.swing.JFrame {
         label_id = new javax.swing.JLabel();
         label_correo = new javax.swing.JLabel();
         label_edad = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         ingresarUsuario = new java.awt.Button();
@@ -129,6 +150,11 @@ public class uiProt extends javax.swing.JFrame {
         btn_consultarNota.setText("Nota");
 
         btn_consultarHorario.setText("Horario");
+        btn_consultarHorario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_consultarHorarioActionPerformed(evt);
+            }
+        });
 
         btn_consultarSubsidio.setText("Subsidio");
         btn_consultarSubsidio.addActionListener(new java.awt.event.ActionListener() {
@@ -240,55 +266,165 @@ public class uiProt extends javax.swing.JFrame {
 
         interfazEstudiante.getAccessibleContext().setAccessibleDescription("");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
+        consulta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btn_consultaHorarioProfe.setText("Horario");
+        btn_consultaHorarioProfe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_consultaHorarioProfeActionPerformed(evt);
+            }
+        });
+
+        btn_consultaInfoProfe.setText("Info. Personal");
+        btn_consultaInfoProfe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_consultaInfoProfeActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel10.setText("Consultas");
+
+        javax.swing.GroupLayout consultaLayout = new javax.swing.GroupLayout(consulta);
+        consulta.setLayout(consultaLayout);
+        consultaLayout.setHorizontalGroup(
+            consultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(consultaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(consultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_consultaInfoProfe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_consultaHorarioProfe, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(consultaLayout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        consultaLayout.setVerticalGroup(
+            consultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(consultaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(btn_consultaHorarioProfe)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_consultaInfoProfe)
+                .addGap(4, 4, 4))
+        );
+
+        jPanel10.setBackground(new java.awt.Color(239, 123, 69));
+
+        mensajeBienvenidaProfesor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        mensajeBienvenidaProfesor.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mensajeBienvenidaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(221, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(mensajeBienvenidaProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel11.setBackground(new java.awt.Color(239, 123, 69));
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        asign.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btn_asignNota.setText("Nota");
+
+        btn_cambiarClaveProfe.setText("Cambiar clave");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setText("Asignaciones");
+
+        javax.swing.GroupLayout asignLayout = new javax.swing.GroupLayout(asign);
+        asign.setLayout(asignLayout);
+        asignLayout.setHorizontalGroup(
+            asignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(asignLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(asignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_cambiarClaveProfe, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                    .addComponent(btn_asignNota, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                    .addGroup(asignLayout.createSequentialGroup()
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        asignLayout.setVerticalGroup(
+            asignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(asignLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btn_asignNota)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_cambiarClaveProfe)
+                .addGap(6, 6, 6))
         );
 
         javax.swing.GroupLayout interfazProfesorLayout = new javax.swing.GroupLayout(interfazProfesor.getContentPane());
         interfazProfesor.getContentPane().setLayout(interfazProfesorLayout);
         interfazProfesorLayout.setHorizontalGroup(
             interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(interfazProfesorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(mensajeBienvenida_, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(asign, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(consulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         interfazProfesorLayout.setVerticalGroup(
             interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(interfazProfesorLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(interfazProfesorLayout.createSequentialGroup()
-                        .addComponent(mensajeBienvenida_, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 225, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(consulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(asign, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        consultas1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        interfazPapito.setBackground(new java.awt.Color(51, 153, 255));
 
+        consultas1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        consultas1.setForeground(new java.awt.Color(205, 237, 246));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Consultas");
 
-        btn_consultarNota1.setText("Nota");
+        btn_consultarNotaPapito.setText("Nota");
 
-        btn_consultarHorario1.setText("Horario");
-        btn_consultarHorario1.addActionListener(new java.awt.event.ActionListener() {
+        btn_consultarHorarioPapito.setText("Horario");
+        btn_consultarHorarioPapito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_consultarHorario1ActionPerformed(evt);
+                btn_consultarHorarioPapitoActionPerformed(evt);
             }
         });
 
-        btn_consultarProfesores1.setText("Profesores");
+        btn_consultarProfesoresPapito.setText("Profesores");
 
         btn_consultarInfoPap.setText("Info. Personal");
         btn_consultarInfoPap.addActionListener(new java.awt.event.ActionListener() {
@@ -304,31 +440,35 @@ public class uiProt extends javax.swing.JFrame {
             .addGroup(consultas1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(consultas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5)
-                    .addComponent(btn_consultarHorario1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_consultarProfesores1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_consultarHorarioPapito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_consultarProfesoresPapito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_consultarInfoPap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_consultarNota1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(128, Short.MAX_VALUE))
+                    .addGroup(consultas1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(110, 110, 110)
+                        .addComponent(btn_consultarNotaPapito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         consultas1Layout.setVerticalGroup(
             consultas1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(consultas1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(53, 53, 53)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addComponent(btn_consultarNota1)
+                .addComponent(btn_consultarNotaPapito)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_consultarHorario1)
+                .addComponent(btn_consultarHorarioPapito)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_consultarProfesores1)
+                .addComponent(btn_consultarProfesoresPapito)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_consultarInfoPap)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         asignacion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 255)));
+        asignacion1.setForeground(new java.awt.Color(205, 237, 246));
 
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Asignaciones");
 
@@ -355,29 +495,66 @@ public class uiProt extends javax.swing.JFrame {
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
+        jPanel8.setBackground(new java.awt.Color(239, 123, 69));
+
+        mensajeBienvenidaPapito.setText("  ");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mensajeBienvenidaPapito, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(mensajeBienvenidaPapito)
+                .addContainerGap())
+        );
+
+        jPanel9.setBackground(new java.awt.Color(239, 123, 69));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 44, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout interfazPapitoLayout = new javax.swing.GroupLayout(interfazPapito.getContentPane());
         interfazPapito.getContentPane().setLayout(interfazPapitoLayout);
         interfazPapitoLayout.setHorizontalGroup(
             interfazPapitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(interfazPapitoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(interfazPapitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(interfazPapitoLayout.createSequentialGroup()
                         .addComponent(consultas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(asignacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(mensajeBienvenidaPapito, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 30, Short.MAX_VALUE))
+                        .addComponent(asignacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         interfazPapitoLayout.setVerticalGroup(
             interfazPapitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, interfazPapitoLayout.createSequentialGroup()
-                .addComponent(mensajeBienvenidaPapito, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(interfazPapitoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(consultas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(asignacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(asignacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(consultas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         cerrar_ventana.setLabel("Aceptar");
@@ -411,9 +588,19 @@ public class uiProt extends javax.swing.JFrame {
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
+        interfaz_horario.setBackground(new java.awt.Color(205, 237, 246));
+
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        label_horario.setEditable(false);
+        label_horarioLunes.setEditable(false);
+
+        label_horarioMiercoles.setEditable(false);
+
+        label_horarioMartes.setEditable(false);
+
+        label_horarioJueves.setEditable(false);
+
+        label_horarioViernes.setEditable(false);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -421,40 +608,85 @@ public class uiProt extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(label_horario)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_horarioLunes, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE)
+                    .addComponent(label_horarioViernes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(label_horarioJueves)
+                    .addComponent(label_horarioMiercoles, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(label_horarioMartes))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(label_horario, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                .addComponent(label_horarioLunes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(label_horarioMartes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label_horarioMiercoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(label_horarioJueves, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(label_horarioViernes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
+        jPanel5.setBackground(new java.awt.Color(239, 123, 69));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Este es tu horario: ");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(70, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(22, 22, 22))
+        );
+
+        jPanel7.setBackground(new java.awt.Color(239, 123, 69));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 92, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout interfaz_horarioLayout = new javax.swing.GroupLayout(interfaz_horario.getContentPane());
         interfaz_horario.getContentPane().setLayout(interfaz_horarioLayout);
         interfaz_horarioLayout.setHorizontalGroup(
             interfaz_horarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(interfaz_horarioLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(interfaz_horarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(interfaz_horarioLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(0, 288, Short.MAX_VALUE)))
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         interfaz_horarioLayout.setVerticalGroup(
             interfaz_horarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, interfaz_horarioLayout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -555,24 +787,65 @@ public class uiProt extends javax.swing.JFrame {
                 .addComponent(label_edad)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(label_correo)
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.setBackground(new java.awt.Color(239, 123, 69));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+
+        jPanel13.setBackground(new java.awt.Color(239, 123, 69));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Información Personal");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel12)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout interfaz_infoLayout = new javax.swing.GroupLayout(interfaz_info.getContentPane());
         interfaz_info.getContentPane().setLayout(interfaz_infoLayout);
         interfaz_infoLayout.setHorizontalGroup(
             interfaz_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(interfaz_infoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         interfaz_infoLayout.setVerticalGroup(
             interfaz_infoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, interfaz_infoLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -584,6 +857,17 @@ public class uiProt extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -746,7 +1030,7 @@ public class uiProt extends javax.swing.JFrame {
        
     }//GEN-LAST:event_btn_consultarInfoPapActionPerformed
 
-    private void btn_consultarHorario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarHorario1ActionPerformed
+    private void btn_consultarHorarioPapitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarHorarioPapitoActionPerformed
         // TODO add your handling code here:
         
         
@@ -767,8 +1051,8 @@ public class uiProt extends javax.swing.JFrame {
        
        
         
-       label_horario.setText("El textfield funciona");
-    }//GEN-LAST:event_btn_consultarHorario1ActionPerformed
+       label_horarioLunes.setText("El textfield funciona");
+    }//GEN-LAST:event_btn_consultarHorarioPapitoActionPerformed
 
     private void label_subsidiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_label_subsidiosActionPerformed
         // TODO add your handling code here:
@@ -779,12 +1063,60 @@ public class uiProt extends javax.swing.JFrame {
         interfaz_consultaSubsidio.setAlwaysOnTop(true);
         interfaz_consultaSubsidio.locate(300, 500);
         interfaz_consultaSubsidio.setVisible(true);
-        interfaz_consultaSubsidio.setTitle("Horario");
+        interfaz_consultaSubsidio.setTitle("Subsidio");
         //mensajeBienvenida.setVisible(false);
         interfaz_consultaSubsidio.setSize(500, 300);
         label_subsidios.setText("El textField funciona");
         
     }//GEN-LAST:event_btn_consultarSubsidioActionPerformed
+
+    private void btn_consultarHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultarHorarioActionPerformed
+        interfaz_horario.setAlwaysOnTop(true);
+        interfaz_horario.locate(300, 500);
+        interfaz_horario.setVisible(true);
+        interfaz_horario.setTitle("Horario");
+        //mensajeBienvenida.setVisible(false);
+        interfaz_horario.setSize(500, 300);
+        /*
+        Papito consultante = (Papito) pap_actual.get(0);
+        ArrayList horario = new ArrayList<String>();
+        horario = logica_consultas.consultarHorario(consultante);
+       
+       ´Pendiente ver como arreglar esto del horario, para que salga algo xd
+        tambien pendiente ver como hacer saltos de linea xd
+        */
+   
+       label_horarioLunes.setText("El textfield funciona");
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_consultarHorarioActionPerformed
+
+    private void btn_consultaHorarioProfeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultaHorarioProfeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_consultaHorarioProfeActionPerformed
+
+    private void btn_consultaInfoProfeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_consultaInfoProfeActionPerformed
+
+     Profesor consultor =  (Profesor) prof_actual.get(0);
+        //jInternalFrame1.setVisible(false);
+        interfaz_info.setAlwaysOnTop(true);
+         interfaz_info.locate(300, 500);
+        interfaz_info.setVisible(true);
+        interfaz_info.setTitle("Informacion Personal");
+        //mensajeBienvenida.setVisible(false);
+        interfaz_info.setSize(500, 300);
+        label_nombre.setText("- Nombre: "+ consultor.getNombre());
+        label_id.setText("- ID: "+ consultor.getID());
+        label_correo.setText("- Usuario: "+ consultor.getEmail());
+        label_edad.setText("- Edad: " + consultor.getEdad());
+        label_usuario.setVisible(false);
+        
+        
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_consultaInfoProfeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -953,8 +1285,8 @@ public class uiProt extends javax.swing.JFrame {
     }
     
     public void interfazExitosa(Profesor encontrado){
-        mensajeBienvenida_.setVisible(true);
-        mensajeBienvenida_.setText("Bienvenido " + encontrado.getNombre());
+        mensajeBienvenidaProfesor.setVisible(true);
+        mensajeBienvenidaProfesor.setText("Bienvenido " + encontrado.getNombre());
         interfazProfesor.setAlwaysOnTop(true);
         interfazProfesor.locate(300, 500);
         interfazProfesor.setVisible(true);
@@ -996,6 +1328,7 @@ public class uiProt extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel asign;
     private javax.swing.JPanel asignacion;
     private javax.swing.JPanel asignacion1;
     private javax.swing.JButton boton_iniciar;
@@ -1003,18 +1336,23 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JButton btn_asgClave1;
     private javax.swing.JButton btn_asgMaterias;
     private javax.swing.JButton btn_asgSub;
+    private javax.swing.JButton btn_asignNota;
+    private javax.swing.JButton btn_cambiarClaveProfe;
+    private javax.swing.JButton btn_consultaHorarioProfe;
+    private javax.swing.JButton btn_consultaInfoProfe;
     private javax.swing.JButton btn_consultarHorario;
-    private javax.swing.JButton btn_consultarHorario1;
+    private javax.swing.JButton btn_consultarHorarioPapito;
     private javax.swing.JButton btn_consultarInfoP;
     private javax.swing.JButton btn_consultarInfoPap;
     private javax.swing.JButton btn_consultarNota;
-    private javax.swing.JButton btn_consultarNota1;
+    private javax.swing.JButton btn_consultarNotaPapito;
     private javax.swing.JButton btn_consultarProfesores;
-    private javax.swing.JButton btn_consultarProfesores1;
+    private javax.swing.JButton btn_consultarProfesoresPapito;
     private javax.swing.JButton btn_consultarSubsidio;
     private javax.swing.ButtonGroup buttonGroup1;
     private java.awt.Button cerrar_ventana;
     private javax.swing.JPasswordField clave_espacio;
+    private javax.swing.JPanel consulta;
     private javax.swing.JPanel consultas;
     private javax.swing.JPanel consultas1;
     private java.awt.Button ingresarUsuario;
@@ -1027,6 +1365,9 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JFrame interfaz_info;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1036,24 +1377,36 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
     private java.awt.Label label1;
     private javax.swing.JLabel label_correo;
     private javax.swing.JLabel label_edad;
-    private javax.swing.JTextField label_horario;
+    private javax.swing.JTextField label_horarioJueves;
+    private javax.swing.JTextField label_horarioLunes;
+    private javax.swing.JTextField label_horarioMartes;
+    private javax.swing.JTextField label_horarioMiercoles;
+    private javax.swing.JTextField label_horarioViernes;
     private javax.swing.JLabel label_id;
     private javax.swing.JLabel label_nombre;
     private javax.swing.JTextField label_subsidios;
     private javax.swing.JLabel label_usuario;
     private javax.swing.JLabel mensajeBienvenida;
     private javax.swing.JLabel mensajeBienvenidaPapito;
-    private javax.swing.JLabel mensajeBienvenida_;
+    private javax.swing.JLabel mensajeBienvenidaProfesor;
     private java.awt.PopupMenu popupMenu1;
     public javax.swing.JTextArea usuario_espacio;
     // End of variables declaration//GEN-END:variables
