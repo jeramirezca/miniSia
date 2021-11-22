@@ -37,20 +37,6 @@ public class uiProt extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        popupMenu1 = new java.awt.PopupMenu();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
-        interfazEstudiante = new javax.swing.JFrame();
-        mensajeBienvenida = new javax.swing.JLabel();
-        interfazProfesor = new javax.swing.JFrame();
-        mensajeBienvenida_ = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        interfazPapito = new javax.swing.JFrame();
-        mensajeBienvenidaPapito = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        ingreso_fallido = new javax.swing.JDialog();
-        cerrar_ventana = new java.awt.Button();
-        label1 = new java.awt.Label();
         MenuPrincipal = new javax.swing.JFrame();
         jPanelFondoFondo = new javax.swing.JPanel();
         jPanelFondoMenu = new javax.swing.JPanel();
@@ -125,122 +111,6 @@ public class uiProt extends javax.swing.JFrame {
         usuario_espacio = new javax.swing.JTextArea();
         boton_iniciar = new javax.swing.JButton();
         clave_espacio = new javax.swing.JPasswordField();
-
-        popupMenu1.setLabel("popupMenu1");
-
-        jInternalFrame1.setVisible(true);
-
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        interfazEstudiante.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        javax.swing.GroupLayout interfazEstudianteLayout = new javax.swing.GroupLayout(interfazEstudiante.getContentPane());
-        interfazEstudiante.getContentPane().setLayout(interfazEstudianteLayout);
-        interfazEstudianteLayout.setHorizontalGroup(
-            interfazEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(interfazEstudianteLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(mensajeBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(195, Short.MAX_VALUE))
-        );
-        interfazEstudianteLayout.setVerticalGroup(
-            interfazEstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(interfazEstudianteLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(mensajeBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(251, Short.MAX_VALUE))
-        );
-
-        interfazEstudiante.getAccessibleContext().setAccessibleDescription("");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout interfazProfesorLayout = new javax.swing.GroupLayout(interfazProfesor.getContentPane());
-        interfazProfesor.getContentPane().setLayout(interfazProfesorLayout);
-        interfazProfesorLayout.setHorizontalGroup(
-            interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(interfazProfesorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(mensajeBienvenida_, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        interfazProfesorLayout.setVerticalGroup(
-            interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(interfazProfesorLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(interfazProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(interfazProfesorLayout.createSequentialGroup()
-                        .addComponent(mensajeBienvenida_, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 225, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        interfazPapito.getContentPane().add(mensajeBienvenidaPapito, java.awt.BorderLayout.CENTER);
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        interfazPapito.getContentPane().add(jPanel4, java.awt.BorderLayout.PAGE_START);
-
-        cerrar_ventana.setLabel("Aceptar");
-        cerrar_ventana.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cerrar_ventanaActionPerformed(evt);
-            }
-        });
-
-        label1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        label1.setText("Lo siento, has ingresado incorrectamente los datos, vuelve a intentarlo.");
-
-        javax.swing.GroupLayout ingreso_fallidoLayout = new javax.swing.GroupLayout(ingreso_fallido.getContentPane());
-        ingreso_fallido.getContentPane().setLayout(ingreso_fallidoLayout);
-        ingreso_fallidoLayout.setHorizontalGroup(
-            ingreso_fallidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ingreso_fallidoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(ingreso_fallidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cerrar_ventana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(129, 129, 129))
-        );
-        ingreso_fallidoLayout.setVerticalGroup(
-            ingreso_fallidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ingreso_fallidoLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addComponent(cerrar_ventana, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
 
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
@@ -621,11 +491,9 @@ public class uiProt extends javax.swing.JFrame {
                                 .addGap(29, 29, 29)
                                 .addGroup(jPanelFondoAsignarNotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField0132, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelNotaAsignarNota))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanelFondoAsignarNotaLayout.createSequentialGroup()
-                                .addComponent(jLabelNumGrupAsignarNota)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(jLabelNotaAsignarNota)))
+                            .addComponent(jLabelNumGrupAsignarNota))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanelFondoAsignarNotaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jTextField0130, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButtonBuscarAsignarNota)
@@ -964,10 +832,6 @@ public class uiProt extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_iniciarActionPerformed
 
-    private void cerrar_ventanaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_ventanaActionPerformed
-        ingreso_fallido.setVisible(false);
-    }//GEN-LAST:event_cerrar_ventanaActionPerformed
-
     private void clave_espacioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clave_espacioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clave_espacioActionPerformed
@@ -1199,15 +1063,9 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JFrame asignarNotas;
     private javax.swing.JButton boton_iniciar;
     private java.awt.Button button1;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private java.awt.Button cerrar_ventana;
     private javax.swing.JPasswordField clave_espacio;
     private javax.swing.JFrame consultarNota;
-    private javax.swing.JDialog ingreso_fallido;
     private javax.swing.JFrame inscribirMaterias;
-    private javax.swing.JFrame interfazEstudiante;
-    private javax.swing.JFrame interfazPapito;
-    private javax.swing.JFrame interfazProfesor;
     private javax.swing.JButton jButtonAsignarAsignarNota;
     private javax.swing.JButton jButtonAsignarInfoMenu;
     private javax.swing.JButton jButtonBuscarAsignarNota;
@@ -1222,7 +1080,6 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVolverConsultarNota;
     private javax.swing.JButton jButtonVolverInscribirMat;
     private javax.swing.JComboBox<String> jComboBoxInscribirMat;
-    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel000;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -1244,8 +1101,6 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTituloAsignarNota;
     private javax.swing.JLabel jLabelTituloConsultarNota;
     private javax.swing.JLabel jLabelTituloInscribirMat;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanelEncabezadoAsignarNota;
     private javax.swing.JPanel jPanelEncabezadoConsultarNota;
     private javax.swing.JPanel jPanelEncabezadoInscribirMat;
@@ -1276,11 +1131,6 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField0133;
     private javax.swing.JTextField jTextField060;
     private javax.swing.JTextField jTextField061;
-    private java.awt.Label label1;
-    private javax.swing.JLabel mensajeBienvenida;
-    private javax.swing.JLabel mensajeBienvenidaPapito;
-    private javax.swing.JLabel mensajeBienvenida_;
-    private java.awt.PopupMenu popupMenu1;
     public javax.swing.JTextArea usuario_espacio;
     // End of variables declaration//GEN-END:variables
 }
