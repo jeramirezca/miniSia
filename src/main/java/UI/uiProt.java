@@ -1093,9 +1093,9 @@ public class uiProt extends javax.swing.JFrame {
         est_actual.remove(0);
         prof_actual.remove(0);
         pap_actual.remove(0);
-=======
+
         interfazPapito.setSize(700, 400);
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
+
     }
 
     
