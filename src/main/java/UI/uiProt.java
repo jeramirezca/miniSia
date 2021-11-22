@@ -37,11 +37,11 @@ public class uiProt extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
+
         ingreso_fallido = new javax.swing.JDialog();
         cerrar_ventana = new java.awt.Button();
         label1 = new java.awt.Label();
-=======
+
         MenuPrincipal = new javax.swing.JFrame();
         jPanelFondoFondo = new javax.swing.JPanel();
         jPanelFondoMenu = new javax.swing.JPanel();
@@ -107,7 +107,7 @@ public class uiProt extends javax.swing.JFrame {
         jLabelInstruct3ConsultarNota = new javax.swing.JLabel();
         jLabelInstruct4ConsultarNota = new javax.swing.JLabel();
         jTextField061 = new javax.swing.JTextField();
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
+
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         button1 = new java.awt.Button();
@@ -118,10 +118,9 @@ public class uiProt extends javax.swing.JFrame {
         boton_iniciar = new javax.swing.JButton();
         clave_espacio = new javax.swing.JPasswordField();
 
-<<<<<<< HEAD
-        cerrar_ventana.setLabel("Aceptar");
+   cerrar_ventana.setLabel("Aceptar");
         cerrar_ventana.addActionListener(new java.awt.event.ActionListener() {
-=======
+
         MenuPrincipal.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelFondoMenu.setBackground(new java.awt.Color(205, 237, 246));
@@ -471,7 +470,7 @@ public class uiProt extends javax.swing.JFrame {
 
         jButtonAsignarAsignarNota.setText("ASIGNAR");
         jButtonAsignarAsignarNota.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
+
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAsignarAsignarNotaActionPerformed(evt);
             }
@@ -538,8 +537,7 @@ public class uiProt extends javax.swing.JFrame {
                 .addComponent(jPanelPiePAginaInscribirNota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-<<<<<<< HEAD
-=======
+
         asignarNotas.getContentPane().add(jPanelFondoAsignarNota, java.awt.BorderLayout.CENTER);
 
         jPanelFondoConsultarNota.setBackground(new java.awt.Color(205, 237, 246));
@@ -711,7 +709,7 @@ public class uiProt extends javax.swing.JFrame {
 
         consultarNota.getContentPane().add(jPanelFondoConsultarNota, java.awt.BorderLayout.CENTER);
 
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MinisiaV1");
         setBackground(new java.awt.Color(255, 255, 204));
@@ -752,7 +750,7 @@ public class uiProt extends javax.swing.JFrame {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 boton_iniciarActionPerformed(evt);
             }
-        });
+
 
         clave_espacio.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         clave_espacio.addActionListener(new java.awt.event.ActionListener() {
@@ -850,8 +848,7 @@ public class uiProt extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_clave_espacioActionPerformed
 
-<<<<<<< HEAD
-=======
+
     private void jButtonConsultarInfoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarInfoMenuActionPerformed
 
     }//GEN-LAST:event_jButtonConsultarInfoMenuActionPerformed
@@ -900,7 +897,7 @@ public class uiProt extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonVolverConsultarNotaActionPerformed
 
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
+
     /**
      * @param args the command line arguments
      */
@@ -1042,14 +1039,14 @@ public class uiProt extends javax.swing.JFrame {
 <<<<<<< HEAD
         interfazEstudiante.setSize(500, 400);
         */
-=======
+
         interfazEstudiante.setSize(700, 400);
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
+
         
     }
     
     public void interfazExitosa(Profesor encontrado){
-<<<<<<< HEAD
+
         /*
         mensajeBienvenidaProfesor.setVisible(true);
         mensajeBienvenidaProfesor.setText("Bienvenido " + encontrado.getNombre());
@@ -1111,15 +1108,14 @@ public class uiProt extends javax.swing.JFrame {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
-    private javax.swing.JButton boton_iniciar;
+
+ private javax.swing.JButton boton_iniciar;
     private java.awt.Button cerrar_ventana;
     private javax.swing.JPasswordField clave_espacio;
     private java.awt.Button ingresarUsuario;
     private javax.swing.JDialog ingreso_fallido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-=======
     private javax.swing.JFrame MenuPrincipal;
     private javax.swing.JLabel TituloMenuPrincipal;
     private javax.swing.JFrame asignarNotas;
@@ -1174,7 +1170,6 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelPiePAginaInscribirNota;
     private javax.swing.JPanel jPanelPiePaginaConsultarNota;
     private javax.swing.JPanel jPanelPiePaginaInscribirMat;
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JSeparator jSeparator001;
@@ -1188,16 +1183,13 @@ public class uiProt extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator060;
     private javax.swing.JSeparator jSeparator061;
     private javax.swing.JTextArea jTextArea1;
-<<<<<<< HEAD
     private java.awt.Label label1;
-=======
     private javax.swing.JTextField jTextField0130;
     private javax.swing.JTextField jTextField0131;
     private javax.swing.JTextField jTextField0132;
     private javax.swing.JTextField jTextField0133;
     private javax.swing.JTextField jTextField060;
     private javax.swing.JTextField jTextField061;
->>>>>>> 43b293341d7966e9b591c4f9f2b9e7f16bbbee49
     public javax.swing.JTextArea usuario_espacio;
     // End of variables declaration//GEN-END:variables
 }
