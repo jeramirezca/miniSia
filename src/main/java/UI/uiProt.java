@@ -15,8 +15,7 @@ import javax.swing.JOptionPane;
 public class uiProt extends javax.swing.JFrame {
 
         ArrayList usuarios_estudiante = new ArrayList<Estudiante>(); 
-        ArrayList usuarios_profesor = new ArrayList<Pr  
-                ofesor>();
+        ArrayList usuarios_profesor = new ArrayList<Profesor>();
         ArrayList usuarios_papitos = new ArrayList<Papito>();
         
         
