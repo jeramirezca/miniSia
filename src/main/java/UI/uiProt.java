@@ -15,12 +15,13 @@ import javax.swing.JOptionPane;
 public class uiProt extends javax.swing.JFrame {
 
     //Objetos globales, lista de estudiantes, profes
+        interfazProfesor profepx = new interfazProfesor();
         ArrayList usuarios_estudiante = new ArrayList<Estudiante>(); 
         ArrayList usuarios_profesor = new ArrayList<Profesor>();
         ArrayList usuarios_papitos = new ArrayList<Papito>();
         
         //Estos objetos sirven para cada sesion, para poder comunicar datos entre las interfaces
-        ArrayList  est_actual = new ArrayList<Estudiante>();
+         ArrayList  est_actual = new ArrayList<Estudiante>();
          ArrayList prof_actual = new ArrayList<Profesor>();
          ArrayList pap_actual = new ArrayList<Papito>();
          
@@ -219,7 +220,7 @@ public class uiProt extends javax.swing.JFrame {
     }//GEN-LAST:event_ingresarUsuarioActionPerformed
 
     private void boton_iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton_iniciarActionPerformed
-        iniciarSia();
+        iniciarSia(); 
         // TODO add your handling code here:
     }//GEN-LAST:event_boton_iniciarActionPerformed
 
@@ -272,7 +273,7 @@ public class uiProt extends javax.swing.JFrame {
     
     //METODOS PARA EL LOGIN
       public  void buscarProfesor(ArrayList<Profesor> lista, int id, String clave){
-          boolean noSeEncontro = true;
+        boolean noSeEncontro = true;
         for(Profesor buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 noSeEncontro = false;
@@ -318,7 +319,7 @@ public class uiProt extends javax.swing.JFrame {
     }
      
       public  void buscarEstudiante(ArrayList<Estudiante> lista, int id, String clave){
-          boolean noSeEncontro = true;
+        boolean noSeEncontro = true;
         for(Estudiante buscando: lista){
             if(buscando.getID()== id && buscando.getClave().equals(clave)){
                 System.out.println("Bienvenido " + buscando.getNombre());
@@ -401,15 +402,15 @@ public class uiProt extends javax.swing.JFrame {
     
     public void interfazExitosa(Profesor encontrado){
         /*
-        mensajeBienvenidaProfesor.setVisible(true);
-        mensajeBienvenidaProfesor.setText("Bienvenido " + encontrado.getNombre());
-        interfazProfesor.setAlwaysOnTop(true);
-        interfazProfesor.locate(300, 500);
-        interfazProfesor.setVisible(true);
+        mensajeBienvenidaProfesor.setVisible(true);*/
+        //profepx.mensajeBienvenidaProfesor.setText("Bienvenido " + encontrado.getNombre());
+        /*interfazProfesor.setAlwaysOnTop(true);
+        interfazProfesor.locate(300, 500);*/
+        profepx.setVisible(true);/*
         interfazProfesor.setTitle("Interfaz Profesor");
         
-        interfazProfesor.setSize(500, 400);
-*/
+        interfazProfesor.setSize(500, 400);*/
+        
         
     }
     
