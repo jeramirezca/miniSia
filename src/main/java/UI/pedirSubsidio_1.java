@@ -37,9 +37,6 @@ public class pedirSubsidio extends javax.swing.JFrame {
         jButtonVolverConsultarNota5 = new javax.swing.JButton();
         jLabelIngresarNombreConsultarNota3 = new javax.swing.JLabel();
         jTextField64 = new javax.swing.JTextField();
-        jPanelPiePaginaConsultarNota7 = new javax.swing.JPanel();
-        jButtonSalirConsultarNota7 = new javax.swing.JButton();
-        jButtonVolverConsultarNota8 = new javax.swing.JButton();
         jPanelFondoConsultarNota8 = new javax.swing.JPanel();
         jPanelEncabezadoConsultarNota9 = new javax.swing.JPanel();
         jLabelTituloConsultarNota9 = new javax.swing.JLabel();
@@ -49,12 +46,8 @@ public class pedirSubsidio extends javax.swing.JFrame {
         jPanelPiePaginaConsultarNota6 = new javax.swing.JPanel();
         jButtonSalirConsultarNota6 = new javax.swing.JButton();
         jButtonVolverConsultarNota6 = new javax.swing.JButton();
-        buttonEditarsubsidio = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jPanelPiePaginaConsultarNota8 = new javax.swing.JPanel();
-        jButtonSalirConsultarNota8 = new javax.swing.JButton();
-        jButtonVolverConsultarNota9 = new javax.swing.JButton();
+        jLabelIngresarNombreConsultarNota4 = new javax.swing.JLabel();
+        jTextField65 = new javax.swing.JTextField();
 
         jPanelFondoConsultarNota7.setBackground(new java.awt.Color(205, 237, 246));
         jPanelFondoConsultarNota7.setPreferredSize(new java.awt.Dimension(410, 310));
@@ -171,44 +164,6 @@ public class pedirSubsidio extends javax.swing.JFrame {
                 .add(jPanelPiePaginaConsultarNota5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 49, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanelPiePaginaConsultarNota7.setBackground(new java.awt.Color(239, 123, 69));
-        jPanelPiePaginaConsultarNota7.setPreferredSize(new java.awt.Dimension(142, 47));
-
-        jButtonSalirConsultarNota7.setText("SALIR");
-        jButtonSalirConsultarNota7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSalirConsultarNota7ActionPerformed(evt);
-            }
-        });
-
-        jButtonVolverConsultarNota8.setText("VOLVER");
-        jButtonVolverConsultarNota8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVolverConsultarNota8ActionPerformed(evt);
-            }
-        });
-
-        org.jdesktop.layout.GroupLayout jPanelPiePaginaConsultarNota7Layout = new org.jdesktop.layout.GroupLayout(jPanelPiePaginaConsultarNota7);
-        jPanelPiePaginaConsultarNota7.setLayout(jPanelPiePaginaConsultarNota7Layout);
-        jPanelPiePaginaConsultarNota7Layout.setHorizontalGroup(
-            jPanelPiePaginaConsultarNota7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPiePaginaConsultarNota7Layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButtonVolverConsultarNota8)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jButtonSalirConsultarNota7)
-                .add(18, 18, 18))
-        );
-        jPanelPiePaginaConsultarNota7Layout.setVerticalGroup(
-            jPanelPiePaginaConsultarNota7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPiePaginaConsultarNota7Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .add(jPanelPiePaginaConsultarNota7Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButtonSalirConsultarNota7)
-                    .add(jButtonVolverConsultarNota8))
-                .addContainerGap())
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanelFondoConsultarNota8.setBackground(new java.awt.Color(205, 237, 246));
@@ -295,54 +250,8 @@ public class pedirSubsidio extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        buttonEditarsubsidio.setText("CONFIRMAR SUBSIDIO");
-        buttonEditarsubsidio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonEditarsubsidioActionPerformed(evt);
-            }
-        });
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jPanelPiePaginaConsultarNota8.setBackground(new java.awt.Color(239, 123, 69));
-        jPanelPiePaginaConsultarNota8.setPreferredSize(new java.awt.Dimension(142, 47));
-
-        jButtonSalirConsultarNota8.setText("SALIR");
-        jButtonSalirConsultarNota8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSalirConsultarNota8ActionPerformed(evt);
-            }
-        });
-
-        jButtonVolverConsultarNota9.setText("VOLVER");
-        jButtonVolverConsultarNota9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVolverConsultarNota9ActionPerformed(evt);
-            }
-        });
-
-        org.jdesktop.layout.GroupLayout jPanelPiePaginaConsultarNota8Layout = new org.jdesktop.layout.GroupLayout(jPanelPiePaginaConsultarNota8);
-        jPanelPiePaginaConsultarNota8.setLayout(jPanelPiePaginaConsultarNota8Layout);
-        jPanelPiePaginaConsultarNota8Layout.setHorizontalGroup(
-            jPanelPiePaginaConsultarNota8Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPiePaginaConsultarNota8Layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButtonVolverConsultarNota9)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jButtonSalirConsultarNota8)
-                .add(18, 18, 18))
-        );
-        jPanelPiePaginaConsultarNota8Layout.setVerticalGroup(
-            jPanelPiePaginaConsultarNota8Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelPiePaginaConsultarNota8Layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jPanelPiePaginaConsultarNota8Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButtonSalirConsultarNota8)
-                    .add(jButtonVolverConsultarNota9))
-                .addContainerGap())
-        );
+        jLabelIngresarNombreConsultarNota4.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabelIngresarNombreConsultarNota4.setText("Estos son tus profesores:");
 
         org.jdesktop.layout.GroupLayout jPanelFondoConsultarNota8Layout = new org.jdesktop.layout.GroupLayout(jPanelFondoConsultarNota8);
         jPanelFondoConsultarNota8.setLayout(jPanelFondoConsultarNota8Layout);
@@ -351,30 +260,24 @@ public class pedirSubsidio extends javax.swing.JFrame {
             .add(jPanelEncabezadoConsultarNota9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
             .add(jPanelPiePaginaConsultarNota6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
             .add(jPanelFondoConsultarNota8Layout.createSequentialGroup()
-                .add(57, 57, 57)
-                .add(jComboBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 82, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 144, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(62, 62, 62))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanelFondoConsultarNota8Layout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(buttonEditarsubsidio)
-                .add(36, 36, 36))
-            .add(jPanelPiePaginaConsultarNota8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
+                .add(jPanelFondoConsultarNota8Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(jPanelFondoConsultarNota8Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .add(jLabelIngresarNombreConsultarNota4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 247, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanelFondoConsultarNota8Layout.createSequentialGroup()
+                        .add(56, 56, 56)
+                        .add(jTextField65, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 295, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .add(0, 0, Short.MAX_VALUE))
         );
         jPanelFondoConsultarNota8Layout.setVerticalGroup(
             jPanelFondoConsultarNota8Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanelFondoConsultarNota8Layout.createSequentialGroup()
                 .add(jPanelEncabezadoConsultarNota9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 57, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(36, 36, 36)
-                .add(jPanelFondoConsultarNota8Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jComboBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 29, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 29, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(41, 41, 41)
-                .add(buttonEditarsubsidio)
-                .add(31, 31, 31)
-                .add(jPanelPiePaginaConsultarNota8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(162, 162, 162)
+                .add(18, 18, 18)
+                .add(jLabelIngresarNombreConsultarNota4)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(jTextField65, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                .add(18, 18, 18)
                 .add(jPanelPiePaginaConsultarNota6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 49, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -382,11 +285,21 @@ public class pedirSubsidio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelFondoConsultarNota8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(0, 410, Short.MAX_VALUE)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(0, 0, Short.MAX_VALUE)
+                    .add(jPanelFondoConsultarNota8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanelFondoConsultarNota8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 258, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+            .add(0, 310, Short.MAX_VALUE)
+            .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(layout.createSequentialGroup()
+                    .add(0, 0, Short.MAX_VALUE)
+                    .add(jPanelFondoConsultarNota8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -407,26 +320,6 @@ public class pedirSubsidio extends javax.swing.JFrame {
     private void jButtonVolverConsultarNota6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverConsultarNota6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonVolverConsultarNota6ActionPerformed
-
-    private void buttonEditarsubsidioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEditarsubsidioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buttonEditarsubsidioActionPerformed
-
-    private void jButtonSalirConsultarNota7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirConsultarNota7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonSalirConsultarNota7ActionPerformed
-
-    private void jButtonVolverConsultarNota8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverConsultarNota8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonVolverConsultarNota8ActionPerformed
-
-    private void jButtonSalirConsultarNota8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirConsultarNota8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonSalirConsultarNota8ActionPerformed
-
-    private void jButtonVolverConsultarNota9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverConsultarNota9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButtonVolverConsultarNota9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -464,18 +357,12 @@ public class pedirSubsidio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonEditarsubsidio;
     private javax.swing.JButton jButtonSalirConsultarNota5;
     private javax.swing.JButton jButtonSalirConsultarNota6;
-    private javax.swing.JButton jButtonSalirConsultarNota7;
-    private javax.swing.JButton jButtonSalirConsultarNota8;
     private javax.swing.JButton jButtonVolverConsultarNota5;
     private javax.swing.JButton jButtonVolverConsultarNota6;
-    private javax.swing.JButton jButtonVolverConsultarNota8;
-    private javax.swing.JButton jButtonVolverConsultarNota9;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabelIngresarNombreConsultarNota3;
+    private javax.swing.JLabel jLabelIngresarNombreConsultarNota4;
     private javax.swing.JLabel jLabelMiniSiaConsultarNota4;
     private javax.swing.JLabel jLabelMiniSiaConsultarNota5;
     private javax.swing.JLabel jLabelMiniSiaConsultarNota6;
@@ -502,8 +389,6 @@ public class pedirSubsidio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelFondoConsultarNota8;
     private javax.swing.JPanel jPanelPiePaginaConsultarNota5;
     private javax.swing.JPanel jPanelPiePaginaConsultarNota6;
-    private javax.swing.JPanel jPanelPiePaginaConsultarNota7;
-    private javax.swing.JPanel jPanelPiePaginaConsultarNota8;
     private javax.swing.JSeparator jSeparator67;
     private javax.swing.JSeparator jSeparator68;
     private javax.swing.JSeparator jSeparator69;
@@ -517,6 +402,7 @@ public class pedirSubsidio extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator77;
     private javax.swing.JSeparator jSeparator78;
     private javax.swing.JTextField jTextField64;
+    private javax.swing.JTextField jTextField65;
     // End of variables declaration//GEN-END:variables
 
 }
