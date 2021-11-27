@@ -12,7 +12,6 @@ public class Profesor{
     private String email;
     private ArrayList<Grupo> cursos;
     private String clave;
-    //METODOS GET Y SET
     
     public void setNombre (String nombre){
         this.nombre = nombre;
@@ -110,8 +109,8 @@ public class Profesor{
 
         cursosDictados += "]";
         
-        String cadena = "Profesor: " + nombre + " edad: " + String.valueOf(edad)
-                + " Correo institucional: " + email + " cursos a cargo: " 
+        String cadena = "Profesor: " + nombre + "\nEdad: " + String.valueOf(edad)
+                + "\nCorreo institucional: " + email + "\ncursos a cargo: " 
                 + cursosDictados;
         return cadena;
     }

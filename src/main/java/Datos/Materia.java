@@ -39,6 +39,8 @@ public class Materia {
         this.grupos = gruposMateria;
     }
     
+    //MÉTODOS CONSTRUCTORES
+    
     public Materia(int codigo, String nombre, int creditos, ArrayList<Grupo> grupos){
         this.setCodigo(codigo);
         this.setNombre(nombre);
@@ -55,7 +57,7 @@ public class Materia {
         this(codigo,"desconocido",0,new ArrayList<Grupo>());
     }
     public Materia(){
-        this(00000,"desconocido",0,new ArrayList<Grupo>());
+        this(0,"desconocido",0,new ArrayList<Grupo>());
     }
     
     

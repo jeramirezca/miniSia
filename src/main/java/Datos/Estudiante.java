@@ -174,12 +174,12 @@ public class Estudiante{
     public String toString(){
         String materias = convertirLista(materiasInscritas);
         String subsidiosEstudiante = convertirLista(subsidios);
-        String cadena = "Estudiante: " + nombre + " Edad: " +
-                String.valueOf(edad) + " años " + " Acudiente: " 
-                + acudiente.getNombre() +" usuario: "+ usuario + 
-                " Identificacion: " + String.valueOf(ID) + 
-                " Materias inscritas: " + materias
-                + " Subsidios que recibe: " + subsidiosEstudiante;
+        String cadena = "Estudiante: " + nombre + "\nEdad: " +
+                String.valueOf(edad) + "años " + "\nAcudiente: " 
+                + acudiente.getNombre() + "\nusuario: "+ usuario + 
+                "\nIdentificacion: " + String.valueOf(ID) + 
+                "\nMaterias inscritas: " + materias
+                + "\nSubsidios que recibe: " + subsidiosEstudiante;
         return cadena;       
              
     }

@@ -138,7 +138,7 @@ public class consultas {
     
     //codigo mio
     public String consultarSubsidio(Estudiante consultor) {
-        String respuesta = " ";
+        String respuesta = "";
 
         if (consultor.getSubsidios().isEmpty()) {
             respuesta = "Usted no tiene subsidios asignados";
@@ -147,18 +147,19 @@ public class consultas {
 
             for (Subsidio i : Lista_subsidios) {
                 //String elemento = " ";
+                int j = 1;
                 String valor_monetario = String.valueOf(i.getValor());
                 String duracion = String.valueOf(i.getDuracionSemestres());
                 String personas_usando = String.valueOf(i.getBeneficiarios().size());
 
-                respuesta += "\n"
-                        + "Tipo: " + i.getTipo()
-                        + " \n Valor asignado: " + valor_monetario
-                        + " \n Duracion semestral: " + duracion
-                        + "\n Personas usando este subsidio: " + personas_usando
-                        + "\n";
+                respuesta += "\nSUBSIDIO" + j + ":"
+                        + " \nTipo: " + i.getTipo()
+                        + " \nValor asignado: " + valor_monetario
+                        + " \nDuracion semestral: " + duracion
+                        + " \nPersonas usando este subsidio: " + personas_usando;
 
                 //respuesta.add(elemento);
+                j ++;
             }
 
         }

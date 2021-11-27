@@ -41,10 +41,15 @@ public class prueba {
     
      //PRUEBAS CON ARRAYLIST
     ArrayList xd = new ArrayList();
-    xd.add("hola");
-    xd.add(1);
+    //xd.add("hola");
+    //xd.add(1);
+    System.out.println(pruebasxd.toString());
+    pruebasxd.setNombre("Simonxd");
+    xd.add(pruebasxd);
     int n = xd.size();
-    System.out.println(xd);
+    System.out.println(xd.get(0).toString());
+    
+    
     }
     
     

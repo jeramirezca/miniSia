@@ -72,6 +72,7 @@ public class Grupo {
         this.notasGrupo = notasGrupo;
     }
     
+    // MÉTODOS CONSTRUCTORES
     public Grupo(Profesor profe, int numero, ArrayList<String> horario, int cupos, 
     Materia asignatura, ArrayList<Estudiante> estudiantes, HashMap<String,Nota> notas ){
         this.setProfesor(profe);

@@ -1,22 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
- */
+
 package Logica;
 import Datos.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-/**
- *
- * @author juan manuel
- */
 public class asignar {
-//esto no es relevante
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
 
     }
@@ -26,8 +15,21 @@ public class asignar {
     Subsidio tipoA = new Subsidio("A", 450.340, 2);
     Subsidio tipoB = new Subsidio("B", 100.340, 1);
     Subsidio tipoC = new Subsidio("C", 320.340, 3);
-
-      public boolean asignarSubsidio(Estudiante solicitante, Subsidio tipo) {
+    
+    public Subsidio buscarSubsidio(String nombre, ArrayList<Subsidio> subsidios){
+       int i = 0;
+       int n = subsidios.size();
+       while( i<n && (subsidios.get(i).getTipo() != nombre) ){
+           i ++;
+       }
+       Subsidio subsidioEncontrado = new Subsidio();
+       if(i<n){
+           subsidioEncontrado = subsidios.get(i);
+       }
+       return subsidioEncontrado;
+    }
+    
+    public void asignarSubsidio(Estudiante solicitante, Subsidio tipo) {
 
         // Parte estudiante
         ArrayList<Subsidio> subsidiosDelEstudiante = solicitante.getSubsidios();
@@ -38,31 +40,65 @@ public class asignar {
         solicitantesSubsidio.add(solicitante);
         tipo.setBeneficiarios(solicitantesSubsidio);
 
-        return true;
-
     }
     
-    public ArrayList<Nota> asignarNota(Grupo grupo_asignar){
-       Scanner sc = new Scanner (System.in);
+    public Estudiante buscarEstudiante (Grupo grupoAsignar, int idEstudiante){
+        ArrayList<Estudiante> alumnosPorCalificar = grupoAsignar.getEstudiantes();
+        int i = 0;
+        int n = alumnosPorCalificar.size();
+        while( i<n && ( alumnosPorCalificar.get(i)).getID() != idEstudiante ){
+            i ++;
+        }
+        Estudiante estudiante = new Estudiante(); 
+        if(i<n){
+            estudiante = alumnosPorCalificar.get(i);
+        }
+        return estudiante;
+    }  
+    
+    public Nota asignarNotaPorEstudiante (Estudiante estudiante, int calificacion) {
+        Nota notaEstudiante = new Nota(calificacion, estudiante);
+        
+        return notaEstudiante;
+    }
+    
+    public Grupo buscarGrupo (Profesor consultor, int numero){
+        ArrayList<Grupo> gruposProfe = consultor.getCursos();
+        int i = 0;
+        int n = gruposProfe.size();
+        while( i<n && ( gruposProfe.get(i)).getNumero() != numero ){
+            i ++;
+        }
+        Grupo encontrado = new Grupo();
+        if( i<n ){
+            encontrado = gruposProfe.get(i);
+        }
+        return encontrado;
+    }  
+    
+    /*  
+    public ArrayList<Nota> asignarNota(Grupo grupoAsignar, int calificacion){
+        
        ArrayList comprobante_notas = new ArrayList<Nota>();
         
-     HashMap  notas_Grupales = new HashMap <String, Object> ();
-        ArrayList<Estudiante> alumnos_por_Calificar = grupo_asignar.getEstudiantes();
+       HashMap  notasGrupales = new HashMap <String, Object> ();
+       ArrayList<Estudiante> alumnos_por_Calificar = grupoAsignar.getEstudiantes();
         
         for (Estudiante alumno: alumnos_por_Calificar){
-            System.out.println("Introduzca Nota del estudiante: " + alumno.getNombre());
-            int calificacion = sc.nextInt();
+            if( buscarEstudiante(grupoAsignar, alumno.getID()) ){}
             Nota nota = new Nota(calificacion,alumno);
-            String nombre = alumno.getNombre();
-            notas_Grupales.put(nombre, nota);
+            String identificacion = String.valueOf(alumno.getID());
+            notasGrupales.put(identificacion, nota);
             comprobante_notas.add(nota);
         }
         
-        grupo_asignar.setNotasGrupo(notas_Grupales);
+        grupoAsignar.setNotasGrupo(notasGrupales);
         return comprobante_notas;
-    }
+    }*/
     
     //Para cambiar notas es necesario el documento del estudiante, y el grupo
+    
+    /*
     public ArrayList<Nota> cambiarNota(Grupo grupo_asignar, int ID_solicitante) {
         Scanner sc = new Scanner(System.in);
         ArrayList comprobante_notas = new ArrayList<Nota>();
@@ -85,8 +121,8 @@ public class asignar {
                 System.out.println("Cambiar la  Nota del estudiante: " + alumno.getNombre());
                 int calificacion = sc.nextInt();
                 Nota nota = new Nota(calificacion, alumno);
-                String nombre = alumno.getNombre();
-                notas_Grupales.put(nombre, nota);
+                String identificacion = String.valueOf(alumno.getID());
+                notas_Grupales.put(identificacion, nota);
                 comprobante_notas.add(nota);
             }
 
@@ -94,19 +130,9 @@ public class asignar {
         
         grupo_asignar.setNotasGrupo(notas_Grupales);
         return comprobante_notas;
-    }
-    
-    
-       public Grupo buscarGrupo (Profesor consultor, int numero){
-        Grupo encontrado = new Grupo();
-        ArrayList<Grupo> gruposProfesor = consultor.getCursos();
-        for(Grupo buscando: gruposProfesor){
-            if(buscando.getNumero()== numero){
-                encontrado =  buscando;
-            }
-        }
-        return encontrado;
-    }
-    
+    } 
+    */
+  
+           
 
-}
+   }

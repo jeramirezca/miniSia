@@ -35,7 +35,7 @@ public class Subsidio {
         return this.duracionSemestres;
     }
 
-    public void setDuraciónSemestres(int duracionSemestres) {
+    public void setDuracionSemestres(int duracionSemestres) {
         this.duracionSemestres = duracionSemestres;
     }
 
@@ -51,7 +51,7 @@ public class Subsidio {
             ArrayList<Estudiante> beneficiarios){
         this.setTipo(tipo);
         this.setValor(valor);
-        this.setDuraciónSemestres(duracion);
+        this.setDuracionSemestres(duracion);
         this.setBeneficiarios(beneficiarios);    
     }
     //Metodos constructores

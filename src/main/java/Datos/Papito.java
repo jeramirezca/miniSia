@@ -53,6 +53,7 @@ public class Papito{
         return this.acudeA;
     }
     
+    
     public String randomUsuario(String nombre){
         Random randomGenerator = new Random();
         int finalPart = randomGenerator.nextInt(100);
@@ -65,6 +66,8 @@ public class Papito{
         int id = randomGenerator.nextInt(500-202) + 202; //genera valores entre 200 y 500 para la id del papito
         return id;
     }
+    
+     //MÉTODOS CONSTRUCTORES
     
     public Papito(String nombre, ArrayList<Estudiante> acudientede, String clave){
         int id = randomID();
@@ -92,9 +95,9 @@ public class Papito{
         }     
         acudidos += "]";
         
-        String cadena = "El acudiente " + nombre + " de identificacion " 
-        + String.valueOf(ID) + " Usuario: " + usuario + " Contraseña: " + 
-                clave + " acude a los estudiantes : " + acudidos;
+        String cadena = "Nombre del acudiente: " + nombre + "\nIdentificacion: " 
+        + String.valueOf(ID) + "\nUsuario: " + usuario + "\nContraseña: " + 
+                clave + "\nAcude a los estudiantes : " + acudidos;
         
         return cadena;
     }
