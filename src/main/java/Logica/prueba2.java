@@ -16,7 +16,7 @@ public class prueba2 {
     en la interfaz inscribir materias y la interfaz pedir subsidio
     */
     
-    public static Materia materia1prueba = new Materia(10001, "Cálculo integral", 4);
+    public static Materia materia1prueba = new Materia(10001, "Calculo integral", 4);
     public static Materia materia2prueba = new Materia(34005, "Programación de computadores", 3);
     
     public static ArrayList<Materia> materias = new ArrayList(Arrays.asList(

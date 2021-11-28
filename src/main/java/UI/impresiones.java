@@ -8,18 +8,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class impresiones {
-    public void mostrarNotas(ArrayList<String> consultas){
-    for(String consulta : consultas){
-        System.out.print(consulta + " ");
-        }  
+    public String mostrarNotas(ArrayList<String> consultas){
+        String notas = "";
+        for(String consulta : consultas){
+            notas += consulta + "\n";
+            }
+        if(consultas.isEmpty()){
+            notas = "NO HAY NOTAS QUE MOSTRAR";
+        }
+        return notas;
     }
     
-    public void mostrarProfes(ArrayList<Profesor> profes){
-        System.out.println("Los profesores del estudiante son: ");
+    public String mostrarProfes(ArrayList<Profesor> profes){
+        String cadena = "Los profesores del estudiante son: \n\n";
         for(Object profe : profes){
         Profesor profesor = (Profesor) profe;
-        System.out.println(profesor.toString());
+        cadena += profesor.toString() + "\n\n";
         }
+        if(profes.isEmpty()){
+            cadena = "No hay profes que mostrar";
+        }
+        return cadena;
     }
     
     public void mostrarProfesPapitos(ArrayList<ArrayList> profesYestudiantes){

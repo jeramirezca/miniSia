@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Logica;
+
 import Datos.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +18,7 @@ public class consultas {
             if( grupos.get(i).getAsignatura() == asignatura) {
                 HashMap notas = grupos.get(i).getNotasGrupo(); 
                 Nota nota = (Nota) notas.get(id);
-                String aniadido = "Materia: " + asignatura.getNombre() + 
+                String aniadido = "Materia: " + asignatura.getNombre() + "\n" +
                         nota.toString();
                 notaEstudiante.add(aniadido);
                 bandera = false;
@@ -31,10 +29,9 @@ public class consultas {
         return notaEstudiante;  
     }
     
-    //codigo de simon
     public ArrayList<String> consultarNotas(Estudiante estudiante){
         String id = String.valueOf(estudiante.getID());
-        ArrayList notasEstudiante = new ArrayList();
+        ArrayList<String> notasEstudiante = new ArrayList();
         ArrayList<Grupo> grupos = estudiante.getAtiende();
         HashMap notasDelGrupo;
         for(Object grupo : grupos){
@@ -66,43 +63,66 @@ public class consultas {
 
     
  //codigo de simon
-    public ArrayList<String> recorrerArregloHorario(ArrayList<Grupo> grupos){
-        ArrayList<String> horario = new ArrayList();
+    public ArrayList<ArrayList<String>> recorrerArregloHorario(ArrayList<Grupo> grupos){
+        ArrayList<ArrayList<String>> horario = new ArrayList();
         for(Object grupo : grupos){
             Grupo grupoObjeto = (Grupo) grupo;
             String nombreMateria = grupoObjeto.getAsignatura().getNombre();
-            String horarioMateria = String.join(", ", grupoObjeto.getHorario());
-            String calendario = nombreMateria + " " + horarioMateria;
-            horario.add(calendario);
+            ArrayList<String> horarioGrupo = grupoObjeto.getHorario();
+            for(int i=0; i<5; i++){
+                if( !(horarioGrupo.get(i).equals("")) ){
+                    String aux = nombreMateria + ": " + horarioGrupo.get(i);
+                    horarioGrupo.remove(i);
+                    horarioGrupo.add(i,aux);
+                }
+            }
+            horario.add(horarioGrupo);
         }
         return horario;
     }
     
     public ArrayList<String> consultarHorario(Estudiante estudiante){
+        
         ArrayList<Grupo> grupos = estudiante.getAtiende();
-        ArrayList<String> horario = recorrerArregloHorario(grupos);
-        String cadena = "HORARIO ESTUDIANTE: ";
-        horario.add(0,cadena);      
-        return horario;
+        ArrayList<ArrayList<String> > horario = recorrerArregloHorario(grupos);
+        ArrayList<String> sumaHorario = new ArrayList<String>();
+        
+        for(int j=0; j<5; j++){
+            String aux = "";
+            for(int i=0; i<horario.size(); i++){
+                aux += horario.get(i).get(j) + " ";
+            }
+            sumaHorario.add(aux);
+        }
+ 
+        return sumaHorario;
         
     }
     
     //codigo de simon
     public ArrayList<String> consultarHorario(Profesor profe){
         ArrayList<Grupo> grupos = profe.getCursos();
-        ArrayList<String> horario = recorrerArregloHorario(grupos);
-        String cadena = "HORARIO PROFE: ";
-        horario.add(0,cadena);      
-        return horario;       
+        ArrayList<ArrayList<String> > horario = recorrerArregloHorario(grupos);
+        ArrayList<String> sumaHorario = new ArrayList<String>();
+        
+        for(int j=0; j<5; j++){
+            String aux = "";
+            for(int i=0; i<horario.size(); i++){
+                aux += horario.get(i).get(j) + " ";
+            }
+            sumaHorario.add(aux);
+        }
+        
+        return sumaHorario;
+        
     }
     
-    public ArrayList<String> consultarHorario(Papito acudiente){
+    public ArrayList< ArrayList<String> > consultarHorario(Papito acudiente){
         ArrayList<Estudiante> acudidos = acudiente.getAcudeA();
-        ArrayList<String> horarioEstudiantes = new ArrayList();
+        ArrayList< ArrayList<String> > horarioEstudiantes = new ArrayList();
         for(Object objeto:acudidos){
             Estudiante estudiante = (Estudiante) objeto;
-            String cadena = estudiante.getNombre() + ": ";
-            cadena += String.join(" ", consultarHorario(estudiante)); 
+            ArrayList<String> cadena = consultarHorario(estudiante); 
             horarioEstudiantes.add(cadena);          
         }    
         return horarioEstudiantes;
@@ -120,6 +140,7 @@ public class consultas {
         return profesores;
     }
     
+    /*
     public ArrayList<ArrayList> consultarProfes(Papito acudiente){
         ArrayList<Estudiante> acudidos = acudiente.getAcudeA();
         ArrayList<ArrayList> profesYestudiantes = new ArrayList();
@@ -133,7 +154,7 @@ public class consultas {
             profesYestudiantes.add(lista);
         }    
         return profesYestudiantes;
-    }
+    }*/
     
     
     //codigo mio
@@ -159,7 +180,7 @@ public class consultas {
                         + " \nPersonas usando este subsidio: " + personas_usando;
 
                 //respuesta.add(elemento);
-                j ++;
+                ++ j;
             }
 
         }

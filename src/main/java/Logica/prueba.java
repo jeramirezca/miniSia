@@ -5,6 +5,7 @@
 package Logica;
 
 import Datos.*;
+import UI.impresiones;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.HashMap;
@@ -45,9 +46,13 @@ public class prueba {
     //xd.add(1);
     System.out.println(pruebasxd.toString());
     pruebasxd.setNombre("Simonxd");
+    impresiones impresor = new impresiones();
+    consultas consultor = new consultas();
+    System.out.println("Prueba: ");
+    System.out.println(impresor.mostrarNotas(consultor.consultarNotas(pruebasxd)));
     xd.add(pruebasxd);
     int n = xd.size();
-    System.out.println(xd.get(0).toString());
+    //System.out.println(xd.get(0).toString());
     
     
     }

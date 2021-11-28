@@ -73,13 +73,12 @@ public class LoginMain extends javax.swing.JFrame {
     "LUNES 1pm-3pm","","MIERCOLES 1pm-3pm", "", ""));
     
     ArrayList<Estudiante> estudiantesGrupo1 = new ArrayList<>(Arrays.asList(
-    estudiante1 ,estudiante2));
+    estudiante1));
     ArrayList<Estudiante> estudiantesGrupo2 = new ArrayList<>(Arrays.asList(
     estudiante3));
     ArrayList<Estudiante> estudiantesGrupo3 = new ArrayList<>(Arrays.asList(
     estudiante1 ,estudiante3));
-    ArrayList<Estudiante> estudiantesGrupo4 = new ArrayList<>(Arrays.asList(
-    estudiante2));
+    ArrayList<Estudiante> estudiantesGrupo4 = new ArrayList<>(Arrays.asList());
     
     
     Grupo grupo1 = new Grupo(profe1,1, HorarioGrupo1,60,materia1, estudiantesGrupo1);
@@ -90,14 +89,12 @@ public class LoginMain extends javax.swing.JFrame {
     //NOTAS
     
     Nota grup1est1 = new Nota(0,estudiante1);
-    Nota grup1est2 = new Nota(0,estudiante2);
     
     Nota grup2est3 = new Nota(0,estudiante3);
     
     Nota grup3est1 = new Nota(0,estudiante1);
     Nota grup3est3 = new Nota(0, estudiante3);
     
-    Nota grup4est2 = new Nota(0, estudiante2);
     
     // ASIGNACIONES DATOS FALTANTES
     
@@ -122,12 +119,9 @@ public class LoginMain extends javax.swing.JFrame {
         estudiante3.setSubsidios(subsidiosEstudiante3);
         ArrayList<Grupo> gruposEstudiante1 = new ArrayList<>(Arrays.asList(
                 grupo1, grupo3));
-        ArrayList<Grupo> gruposEstudiante2 = new ArrayList<>(Arrays.asList(
-                grupo1, grupo4));
         ArrayList<Grupo> gruposEstudiante3 = new ArrayList<>(Arrays.asList(
                 grupo2, grupo3));
         estudiante1.setAtiende(gruposEstudiante1);
-        estudiante2.setAtiende(gruposEstudiante2);
         estudiante3.setAtiende(gruposEstudiante3);
         estudiante1.setClave("JS2324s");
         estudiante2.setClave("KS234f");
@@ -152,7 +146,6 @@ public class LoginMain extends javax.swing.JFrame {
         //GRUPOS
         HashMap<String, Nota> notasGrupo1 = new HashMap();
         notasGrupo1.put(String.valueOf(estudiante1.getID()), grup1est1);
-        notasGrupo1.put(String.valueOf(estudiante2.getID()), grup1est2);
         grupo1.setNotasGrupo(notasGrupo1);
         
         HashMap<String, Nota> notasGrupo2 = new HashMap();
@@ -165,7 +158,6 @@ public class LoginMain extends javax.swing.JFrame {
         grupo3.setNotasGrupo(notasGrupo3);
         
         HashMap<String, Nota> notasGrupo4 = new HashMap();
-        notasGrupo4.put(String.valueOf(estudiante2.getID()), grup4est2);
         grupo4.setNotasGrupo(notasGrupo4);
         
         //SUBSIDIOS

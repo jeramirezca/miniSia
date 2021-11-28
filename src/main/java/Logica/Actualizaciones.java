@@ -9,7 +9,7 @@ public class Actualizaciones {
     public Materia buscarMateria(String nombre, ArrayList<Materia> materias){
        int i = 0;
        int n = materias.size();
-       while( i<n && (materias.get(i).getNombre() != nombre) ){
+       while( i<n && !(materias.get(i).getNombre().equals(nombre) ) ){
            i ++;
        }
        Materia materiaEncontrada = new Materia();

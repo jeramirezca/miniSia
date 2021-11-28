@@ -334,6 +334,7 @@ public class InterfazEstudiante extends javax.swing.JFrame {
         ConsultarProfesFrame profes = new ConsultarProfesFrame();
         profes.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_buttonProfesoresActionPerformed
 
     private void buttonInforpersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonInforpersonalActionPerformed

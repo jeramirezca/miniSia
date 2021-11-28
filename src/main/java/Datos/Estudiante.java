@@ -175,7 +175,7 @@ public class Estudiante{
         String materias = convertirLista(materiasInscritas);
         String subsidiosEstudiante = convertirLista(subsidios);
         String cadena = "Estudiante: " + nombre + "\nEdad: " +
-                String.valueOf(edad) + "años " + "\nAcudiente: " 
+                String.valueOf(edad) + " años " + "\nAcudiente: " 
                 + acudiente.getNombre() + "\nusuario: "+ usuario + 
                 "\nIdentificacion: " + String.valueOf(ID) + 
                 "\nMaterias inscritas: " + materias
